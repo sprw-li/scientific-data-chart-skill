@@ -1,42 +1,69 @@
 {
-  "case_id": "SYNTHETIC-GA-001",
+  "case_id": "SYNTHETIC-CHART-001",
   "status": "ok",
-  "scope": "Single-page graphical abstract (problem -> method -> core result -> conclusion) built from the case materials; editable layered source plus PNG/PDF exports, with per-element provenance.",
+  "scope": "Source-bound scientific data figure: source table -> chart marks, journal/style presets, annotation gates A-L, a two-way mark<->source data map, an editable layered SVG master plus real PNG/PDF exports.",
+  "preset": "nature-single",
+  "checks": {
+    "A": "pass",
+    "B": "pass",
+    "C": "pass",
+    "D": "pass",
+    "E": "pass",
+    "F": "pass",
+    "G": "pass",
+    "H": "pass",
+    "I": "pass",
+    "J": "pass",
+    "K": "warn",
+    "L": "pass"
+  },
+  "mark_data_map": "mark_data_map.json",
+  "source_map": "source_map.json",
   "artifacts": {
     "figure.svg": {
       "path": "figure.svg",
-      "bytes": 107034,
-      "sha256": "f50350f53c0abbd95eec5975bcf4cdfa7bf7743ac8f1e8b9032df989d1be3bd4"
+      "bytes": 48817,
+      "sha256": "cd3eb7c6dc9fbf590744ee2bbbdf567ecd71bc7d74f736861280e27976b35616"
     },
     "figure.pdf": {
       "path": "figure.pdf",
-      "bytes": 1107838,
-      "sha256": "5bcda6ce390a87a211b0ef294652a41ab9929ce28ce1c05ffa0e4dd43d9cadf2"
+      "bytes": 1102143,
+      "sha256": "4010ef82afebb80854c2410a9e9638e9dc724687a000751cc6ee71c734863c8a"
     },
     "figure.png": {
       "path": "figure.png",
-      "bytes": 928901,
-      "sha256": "f7254d82f7e5823291023bfd2fb1fc4fc69215d3290f0a9baf7709ce2c4cb599"
+      "bytes": 231913,
+      "sha256": "c6308839b5a26400c4be82e695ee15e8f0c0c554768d0db8497e82d2420b2dcd"
     },
     "figure_spec.resolved.json": {
       "path": "figure_spec.resolved.json",
-      "bytes": 21985,
-      "sha256": "c9bf93e3c8ef50b966fe10c6a14f4e4384aa385bd75b5fb8c4a35277c58aafcc"
+      "bytes": 13222,
+      "sha256": "e95b97db17b1ae01a55574975c5f0fc372b38a51de4cf898c9c87d552479a7fd"
+    },
+    "mark_data_map.json": {
+      "path": "mark_data_map.json",
+      "bytes": 16851,
+      "sha256": "6fde5b15ca1d2422fd8389881a13f13e02d2196a0a73df40226ab370d93263c0"
+    },
+    "source_map.json": {
+      "path": "source_map.json",
+      "bytes": 45680,
+      "sha256": "a1871ae3f7c05ae44879b133b2146c7416c4725cc1e9b94287fed45485eecc6c"
     },
     "export_report.json": {
       "path": "export_report.json",
-      "bytes": 4193,
-      "sha256": "a455c8261601cac1db04ae83f1fbfaf4305a60df4e67f88a1e0e2b23d4dfcde8"
+      "bytes": 6789,
+      "sha256": "a28293d4d26dbe11906bc9d792e20b797df0137e2902c3dfc32291a781aa3ce2"
     },
     "validation_report.json": {
       "path": "validation_report.json",
-      "bytes": 3708,
-      "sha256": "09d1a740650751db113801206fe1a0353e47857e99a9e611936603b769993ed6"
+      "bytes": 5126,
+      "sha256": "aafba3281b63d2227838a10e6f97079c2b72d67fc0ce7f883b28d29db7fe7567"
     },
     "scene.json": {
       "path": "scene.json",
-      "bytes": 245379,
-      "sha256": "fabd1d008471abde2a0e96ad45dace002e84571cdcd3bad82b09bea01e7a6459"
+      "bytes": 118517,
+      "sha256": "2d3438a66ce20c18158d26232ece4e1761f745d96c6e3527f126363cd453f542"
     }
   },
   "sources": [
@@ -44,887 +71,669 @@
       "path": "case.json",
       "kind": "json",
       "role": "case input",
-      "sha256": "e1bfe1158dc7bd0dca1d575ab44476b593ef399da103cd156b90f9c5b8374160"
+      "sha256": "3b77f38ef43d8635a274e30df00f8457211182ff28f3ec7d26213172ce030b94"
     },
     {
-      "path": "materials/figure03-structure.json",
-      "kind": "json",
+      "path": "materials/experiment.csv",
+      "kind": "csv",
       "role": "material",
-      "sha256": "5bbedbd79a7b5ccbe3b3948c769730a47b83e4e37ae5325dffd0ff7511cb53b2",
-      "bytes": 1855
+      "sha256": "84ed5fa5b28f4551bbf40ed1d628fbc57add96d93c68757952d42efee8ec9435",
+      "bytes": 416
     },
     {
-      "path": "materials/paper-excerpt.md",
+      "path": "materials/methods.md",
       "kind": "markdown",
       "role": "material",
-      "sha256": "d9d08f84c485d792984716dec705f35328b746f6842ae0ce615c0f3976ea15ba",
-      "bytes": 2966
+      "sha256": "c959071b208dc140e120a3a518ac5ea48ea6bc119558769f8caa854030e51820",
+      "bytes": 1004
     },
     {
       "path": "materials/timecourse.csv",
       "kind": "csv",
       "role": "material",
-      "sha256": "7b22e6595f8b1d59fc0375f567be122eb6cee0b9a580246f9106767a1b371a88",
-      "bytes": 718
+      "sha256": "601ef21baa88f39602393f0459f7fe18ab80774a42f17cf9e538b9bcfe0df30c",
+      "bytes": 173
     },
     {
       "path": "task.md",
       "kind": "markdown",
       "role": "task",
-      "sha256": "745d8e32a8e7e695cf01d7f0180530e18c2d5700843f0ba6aaf1bbde6f46c230",
-      "bytes": 552
+      "sha256": "67c13a30987b4d0ae2f3271907fc5fc57a1e208bc8659855b0e10d2d6862301d",
+      "bytes": 1008
     },
     {
       "path": "case.json",
       "kind": "json",
       "role": "case",
-      "sha256": "e1bfe1158dc7bd0dca1d575ab44476b593ef399da103cd156b90f9c5b8374160",
-      "bytes": 477
+      "sha256": "3b77f38ef43d8635a274e30df00f8457211182ff28f3ec7d26213172ce030b94",
+      "bytes": 2124
     }
   ],
   "evidence": [
     {
       "id": "E1",
-      "claim": "Title: Mitochondrial ROS relay stabilises HIF-1alpha and reprograms substrate use in hypoxic cardiomyocytes",
-      "kind": "relation",
+      "claim": "Measurement note (authoritative source statement for this fixture)",
+      "kind": "condition",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L3-5",
-        "quote": "Title: Mitochondrial ROS relay stabilises HIF-1alpha and reprograms substrate use in hypoxic cardiomyocytes"
+        "file": "materials/methods.md",
+        "locator": "L3",
+        "quote": "Measurement note (authoritative source statement for this fixture)"
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L3-4",
+        "file": "materials/methods.md",
+        "locator": "L3",
         "span": [
-          64,
-          171
+          67,
+          133
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E2",
-      "claim": "Cardiomyocytes exposed to ischaemia face a fall in oxygen availability.",
-      "kind": "condition",
+      "claim": "H9c2 cardiomyoblasts were exposed for 24 h to normoxia (control), 1% O2 (hypoxia), or 1% O2 after HIF-1A knockdown (hypoxia+siHIF1A).",
+      "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L7",
-        "quote": "Cardiomyocytes exposed to ischaemia face a fall in oxygen availability."
+        "file": "materials/methods.md",
+        "locator": "L5",
+        "quote": "H9c2 cardiomyoblasts were exposed for 24 h to normoxia (control), 1% O2 (hypoxia), or 1% O2 after HIF-1A knockdown (hypoxia+siHIF1A)."
       },
-      "value": null,
-      "unit": null,
+      "value": 1.0,
+      "unit": "percent",
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L7",
+        "file": "materials/methods.md",
+        "locator": "L5",
         "span": [
-          187,
-          258
+          135,
+          268
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E3",
-      "claim": "Mitochondrial reactive oxygen species (ROS) rise within minutes of hypoxia and have been proposed to act as a signalling relay rather than only as damage.",
-      "kind": "condition",
+      "claim": "Cell viability was measured at 24 h with three biological replicates per condition.",
+      "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L8-9",
-        "quote": "Mitochondrial reactive oxygen species (ROS) rise within minutes of hypoxia and have been proposed to act as a signalling relay rather than only as damage."
+        "file": "materials/methods.md",
+        "locator": "L6",
+        "quote": "Cell viability was measured at 24 h with three biological replicates per condition."
       },
-      "value": null,
+      "value": 24.0,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L8-9",
+        "file": "materials/methods.md",
+        "locator": "L6",
         "span": [
-          259,
-          413
+          269,
+          352
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E4",
-      "claim": "Whether that relay is what stabilises HIF-1alpha, and how the cell keeps ATP supply while glucose oxidation is suppressed, remains unresolved.",
-      "kind": "relation",
+      "claim": "Each bar in the example figure is the mean of the three replicates;",
+      "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L10-11",
-        "quote": "Whether that relay is what stabilises HIF-1alpha, and how the cell keeps ATP supply while glucose oxidation is suppressed, remains unresolved."
+        "file": "materials/methods.md",
+        "locator": "L7",
+        "quote": "Each bar in the example figure is the mean of the three replicates;"
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L10-11",
+        "file": "materials/methods.md",
+        "locator": "L7",
         "span": [
-          414,
-          556
+          353,
+          420
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E5",
-      "claim": "H9c2 cardiomyoblasts were exposed to 1% O2 for 24 h (hypoxia) or 21% O2 (normoxia).",
-      "kind": "number",
+      "claim": "the error bars are one standard deviation (SD) around that mean.",
+      "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L14-15",
-        "quote": "H9c2 cardiomyoblasts were exposed to 1% O2 for 24 h (hypoxia) or 21% O2 (normoxia)."
+        "file": "materials/methods.md",
+        "locator": "L7",
+        "quote": "the error bars are one standard deviation (SD) around that mean."
       },
-      "value": 21.0,
-      "unit": "percent",
+      "value": null,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L14-15",
+        "file": "materials/methods.md",
+        "locator": "L7",
         "span": [
-          569,
-          652
+          421,
+          485
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E6",
-      "claim": "Mitochondrial ROS were measured with MitoSOX.",
-      "kind": "condition",
+      "claim": "Mitochondrial ROS in the example time course are group means and are reported as fold change relative to the 0 h normoxia sample.",
+      "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L15",
-        "quote": "Mitochondrial ROS were measured with MitoSOX."
+        "file": "materials/methods.md",
+        "locator": "L8",
+        "quote": "Mitochondrial ROS in the example time course are group means and are reported as fold change relative to the 0 h normoxia sample."
       },
-      "value": null,
-      "unit": null,
+      "value": 0.0,
+      "unit": "fold",
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L15",
+        "file": "materials/methods.md",
+        "locator": "L8",
         "span": [
-          653,
-          698
+          486,
+          615
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E7",
-      "claim": "HIF-1alpha protein was quantified by immunoblot.",
-      "kind": "condition",
+      "claim": "The source release reports that viability in hypoxia differs from the control;",
+      "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L15-16",
-        "quote": "HIF-1alpha protein was quantified by immunoblot."
+        "file": "materials/methods.md",
+        "locator": "L9",
+        "quote": "The source release reports that viability in hypoxia differs from the control;"
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L15-16",
+        "file": "materials/methods.md",
+        "locator": "L9",
         "span": [
-          699,
-          747
+          616,
+          694
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E8",
-      "claim": "Transcripts were measured by RT-qPCR.",
-      "kind": "condition",
+      "claim": "it does not state a p-value for that comparison.",
+      "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L16",
-        "quote": "Transcripts were measured by RT-qPCR."
+        "file": "materials/methods.md",
+        "locator": "L9",
+        "quote": "it does not state a p-value for that comparison."
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L16",
+        "file": "materials/methods.md",
+        "locator": "L9",
         "span": [
-          748,
-          785
+          695,
+          743
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E9",
-      "claim": "Substrate use was resolved with a Seahorse assay using glucose or palmitate.",
-      "kind": "condition",
+      "claim": "Therefore the example marks the reported comparison without claiming a p-value.",
+      "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L16-17",
-        "quote": "Substrate use was resolved with a Seahorse assay using glucose or palmitate."
+        "file": "materials/methods.md",
+        "locator": "L10",
+        "quote": "Therefore the example marks the reported comparison without claiming a p-value."
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L16-17",
+        "file": "materials/methods.md",
+        "locator": "L10",
         "span": [
-          786,
-          862
+          744,
+          823
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E10",
-      "claim": "ATP content was normalised to total protein.",
+      "claim": "The draft caption supplied with this fixture is out of date and is not the source of truth.",
       "kind": "condition",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L17-18",
-        "quote": "ATP content was normalised to total protein."
+        "file": "materials/methods.md",
+        "locator": "L11",
+        "quote": "The draft caption supplied with this fixture is out of date and is not the source of truth."
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L17-18",
+        "file": "materials/methods.md",
+        "locator": "L11",
         "span": [
-          863,
-          907
+          824,
+          915
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E11",
-      "claim": "HIF-1alpha and NRF2 were knocked down with siRNA.",
+      "claim": "Units: viability in percent (%), mitochondrial ROS as fold change, time in hours (h).",
       "kind": "entity",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L18",
-        "quote": "HIF-1alpha and NRF2 were knocked down with siRNA."
+        "file": "materials/methods.md",
+        "locator": "L12",
+        "quote": "Units: viability in percent (%), mitochondrial ROS as fold change, time in hours (h)."
       },
       "value": null,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L18",
+        "file": "materials/methods.md",
+        "locator": "L12",
         "span": [
-          908,
-          957
+          916,
+          1001
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E12",
-      "claim": "Hypoxia raised mitochondrial ROS 2.8-fold (MitoSOX, normoxia 1.0) and stabilised HIF-1alpha protein 3.4-fold.",
+      "claim": "control,1,24,99.2,1.02,18.6,0.42",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L21-22",
-        "quote": "Hypoxia raised mitochondrial ROS 2.8-fold (MitoSOX, normoxia 1.0) and stabilised HIF-1alpha protein 3.4-fold."
+        "file": "materials/experiment.csv",
+        "locator": "row 2",
+        "quote": "control,1,24,99.2,1.02,18.6,0.42"
       },
-      "value": 3.4,
-      "unit": "fold",
+      "value": 0.42,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L21-22",
+        "file": "materials/experiment.csv",
+        "locator": "row 2",
         "span": [
-          970,
-          1079
+          95,
+          127
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E13",
-      "claim": "HIF-1alpha knockdown abolished the rise in LDHA mRNA (4.1-fold in hypoxia, 1.1-fold after knockdown) and in PDK1 mRNA (2.6-fold, 1.0-fold), showing that LDHA and PDK1 transcription is HIF-1alpha dependent.",
+      "claim": "control,2,24,98.4,0.97,18.9,0.41",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L22-24",
-        "quote": "HIF-1alpha knockdown abolished the rise in LDHA mRNA (4.1-fold in hypoxia, 1.1-fold after knockdown) and in PDK1 mRNA (2.6-fold, 1.0-fold), showing that LDHA and PDK1 transcription is HIF-1alpha dependent."
+        "file": "materials/experiment.csv",
+        "locator": "row 3",
+        "quote": "control,2,24,98.4,0.97,18.9,0.41"
       },
-      "value": 1.0,
-      "unit": "fold",
+      "value": 0.41,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L22-24",
+        "file": "materials/experiment.csv",
+        "locator": "row 3",
         "span": [
-          1080,
-          1285
+          128,
+          160
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E14",
-      "claim": "PDK1 phosphorylated PDH at Ser293 3.1-fold, and PDH catalytic activity fell from 0.42 to 0.19 per second.",
+      "claim": "control,3,24,99.7,1.01,18.3,0.42",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L25-26",
-        "quote": "PDK1 phosphorylated PDH at Ser293 3.1-fold, and PDH catalytic activity fell from 0.42 to 0.19 per second."
+        "file": "materials/experiment.csv",
+        "locator": "row 4",
+        "quote": "control,3,24,99.7,1.01,18.3,0.42"
       },
-      "value": 0.19,
-      "unit": "per second",
+      "value": 0.42,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L25-26",
+        "file": "materials/experiment.csv",
+        "locator": "row 4",
         "span": [
-          1286,
-          1391
+          161,
+          193
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E15",
-      "claim": "Glucose-supported oxygen consumption fell from 42.3 to 23.8 pmol per minute, while palmitate-supported oxygen consumption rose from 11.6 to 34.2 pmol per minute;",
+      "claim": "hypoxia,1,24,82.1,2.74,12.6,0.19",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L26-28",
-        "quote": "Glucose-supported oxygen consumption fell from 42.3 to 23.8 pmol per minute, while palmitate-supported oxygen consumption rose from 11.6 to 34.2 pmol per minute;"
+        "file": "materials/experiment.csv",
+        "locator": "row 5",
+        "quote": "hypoxia,1,24,82.1,2.74,12.6,0.19"
       },
-      "value": 34.2,
-      "unit": "pmol/min",
+      "value": 0.19,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L26-28",
+        "file": "materials/experiment.csv",
+        "locator": "row 5",
         "span": [
-          1392,
-          1553
+          194,
+          226
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E16",
-      "claim": "total oxygen consumption was therefore maintained (53.9 to 58.0 pmol per minute).",
+      "claim": "hypoxia,2,24,84.3,2.88,12.1,0.20",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L28-29",
-        "quote": "total oxygen consumption was therefore maintained (53.9 to 58.0 pmol per minute)."
+        "file": "materials/experiment.csv",
+        "locator": "row 6",
+        "quote": "hypoxia,2,24,84.3,2.88,12.1,0.20"
       },
-      "value": 58.0,
-      "unit": "pmol/min",
+      "value": 0.2,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L28-29",
+        "file": "materials/experiment.csv",
+        "locator": "row 6",
         "span": [
-          1554,
-          1635
+          227,
+          259
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E17",
-      "claim": "ATP content fell modestly, from 18.7 to 12.4 nanomoles per milligram of protein.",
+      "claim": "hypoxia,3,24,83.0,2.81,12.4,0.19",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L29-30",
-        "quote": "ATP content fell modestly, from 18.7 to 12.4 nanomoles per milligram of protein."
+        "file": "materials/experiment.csv",
+        "locator": "row 7",
+        "quote": "hypoxia,3,24,83.0,2.81,12.4,0.19"
       },
-      "value": 12.4,
-      "unit": "nmol/mg",
+      "value": 0.19,
+      "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L29-30",
+        "file": "materials/experiment.csv",
+        "locator": "row 7",
         "span": [
-          1636,
-          1716
+          260,
+          292
         ],
         "reason": "verbatim match"
       }
     },
     {
       "id": "E18",
-      "claim": "Extracellular acidification rate rose from 12.4 to 31.8 milli-pH units per minute, consistent with increased glycolytic flux.",
+      "claim": "hypoxia+siHIF1A,1,24,91.2,1.15,15.8,0.28",
       "kind": "number",
       "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L30-31",
-        "quote": "Extracellular acidification rate rose from 12.4 to 31.8 milli-pH units per minute, consistent with increased glycolytic flux."
+        "file": "materials/experiment.csv",
+        "locator": "row 8",
+        "quote": "hypoxia+siHIF1A,1,24,91.2,1.15,15.8,0.28"
       },
-      "value": 31.8,
-      "unit": "mpH/min",
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L30-31",
-        "span": [
-          1717,
-          1842
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E19",
-      "claim": "NRF2 nuclear translocation increased 3.2-fold and its targets NQO1 and HMOX1 rose 2.9-fold and 2.4-fold.",
-      "kind": "number",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L32-33",
-        "quote": "NRF2 nuclear translocation increased 3.2-fold and its targets NQO1 and HMOX1 rose 2.9-fold and 2.4-fold."
-      },
-      "value": 2.4,
-      "unit": "fold",
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L32-33",
-        "span": [
-          1843,
-          1947
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E20",
-      "claim": "NRF2 knockdown raised mitochondrial ROS further, from 2.8-fold to 4.6-fold, and combined HIF-1alpha plus NRF2 knockdown reduced viability from 92 percent to 54 percent.",
-      "kind": "number",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L33-35",
-        "quote": "NRF2 knockdown raised mitochondrial ROS further, from 2.8-fold to 4.6-fold, and combined HIF-1alpha plus NRF2 knockdown reduced viability from 92 percent to 54 percent."
-      },
-      "value": 54.0,
-      "unit": "percent",
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L33-35",
-        "span": [
-          1948,
-          2116
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E21",
-      "claim": "Mitochondrial ROS act upstream of HIF-1alpha in hypoxic cardiomyocytes.",
-      "kind": "entity",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L38",
-        "quote": "Mitochondrial ROS act upstream of HIF-1alpha in hypoxic cardiomyocytes."
-      },
-      "value": null,
+      "value": 0.28,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L38",
+        "file": "materials/experiment.csv",
+        "locator": "row 8",
         "span": [
-          2132,
-          2203
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E22",
-      "claim": "The HIF-1alpha-PDK1 arm suppresses glucose oxidation without collapsing total oxygen consumption, because fatty acid oxidation compensates.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L38-40",
-        "quote": "The HIF-1alpha-PDK1 arm suppresses glucose oxidation without collapsing total oxygen consumption, because fatty acid oxidation compensates."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L38-40",
-        "span": [
-          2204,
-          2343
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E23",
-      "claim": "NRF2 restrains the ROS signal, and losing both arms together costs viability.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L40-41",
-        "quote": "NRF2 restrains the ROS signal, and losing both arms together costs viability."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L40-41",
-        "span": [
-          2344,
-          2421
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E24",
-      "claim": "Mitochondrial ROS relay in hypoxic cardiomyocytes.",
-      "kind": "entity",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L44",
-        "quote": "Mitochondrial ROS relay in hypoxic cardiomyocytes."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L44",
-        "span": [
-          2474,
-          2524
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E25",
-      "claim": "Hypoxia increases mitochondrial ROS, which stabilises HIF-1alpha.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L44-45",
-        "quote": "Hypoxia increases mitochondrial ROS, which stabilises HIF-1alpha."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L44-45",
-        "span": [
-          2525,
-          2590
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E26",
-      "claim": "HIF-1alpha drives LDHA and PDK1;",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L45",
-        "quote": "HIF-1alpha drives LDHA and PDK1;"
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L45",
-        "span": [
-          2591,
-          2623
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E27",
-      "claim": "PDK1 phosphorylates PDH at Ser293 and lowers PDH activity, suppressing glucose-supported oxygen consumption while palmitate-supported oxygen consumption rises, so total oxygen consumption is maintained.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L46-48",
-        "quote": "PDK1 phosphorylates PDH at Ser293 and lowers PDH activity, suppressing glucose-supported oxygen consumption while palmitate-supported oxygen consumption rises, so total oxygen consumption is maintained."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L46-48",
-        "span": [
-          2624,
-          2826
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E28",
-      "claim": "NRF2 translocates to the nucleus and induces NQO1 and HMOX1, which restrain ROS.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L48-49",
-        "quote": "NRF2 translocates to the nucleus and induces NQO1 and HMOX1, which restrain ROS."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L48-49",
-        "span": [
-          2827,
-          2907
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E29",
-      "claim": "Combined loss of HIF-1alpha and NRF2 reduces viability.",
-      "kind": "relation",
-      "source": {
-        "file": "materials/paper-excerpt.md",
-        "locator": "L49-50",
-        "quote": "Combined loss of HIF-1alpha and NRF2 reduces viability."
-      },
-      "value": null,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/paper-excerpt.md",
-        "locator": "L49-50",
-        "span": [
-          2908,
-          2963
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E30",
-      "claim": "normoxia,0,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0",
-      "kind": "number",
-      "source": {
-        "file": "materials/timecourse.csv",
-        "locator": "row 2",
-        "quote": "normoxia,0,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0"
-      },
-      "value": 98.0,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/timecourse.csv",
-        "locator": "row 2",
-        "span": [
-          206,
-          269
-        ],
-        "reason": "verbatim match"
-      }
-    },
-    {
-      "id": "E31",
-      "claim": "normoxia,6,6,1.1,1.0,1.0,1.0,0.41,42.0,11.8,53.8,12.6,18.5,98.0",
-      "kind": "number",
-      "source": {
-        "file": "materials/timecourse.csv",
-        "locator": "row 3",
-        "quote": "normoxia,6,6,1.1,1.0,1.0,1.0,0.41,42.0,11.8,53.8,12.6,18.5,98.0"
-      },
-      "value": 98.0,
-      "unit": null,
-      "resolved": {
-        "ok": true,
-        "file": "materials/timecourse.csv",
-        "locator": "row 3",
-        "span": [
-          270,
+          293,
           333
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E32",
-      "claim": "normoxia,12,6,1.0,1.1,1.1,1.0,0.42,42.6,11.5,54.1,12.3,18.8,97.0",
+      "id": "E19",
+      "claim": "hypoxia+siHIF1A,2,24,90.4,1.09,16.2,0.29",
       "kind": "number",
       "source": {
-        "file": "materials/timecourse.csv",
-        "locator": "row 4",
-        "quote": "normoxia,12,6,1.0,1.1,1.1,1.0,0.42,42.6,11.5,54.1,12.3,18.8,97.0"
+        "file": "materials/experiment.csv",
+        "locator": "row 9",
+        "quote": "hypoxia+siHIF1A,2,24,90.4,1.09,16.2,0.29"
       },
-      "value": 97.0,
+      "value": 0.29,
       "unit": null,
       "resolved": {
         "ok": true,
-        "file": "materials/timecourse.csv",
-        "locator": "row 4",
+        "file": "materials/experiment.csv",
+        "locator": "row 9",
         "span": [
           334,
-          398
+          374
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E33",
-      "claim": "normoxia,24,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0",
+      "id": "E20",
+      "claim": "hypoxia+siHIF1A,3,24,92.0,1.21,15.5,0.30",
+      "kind": "number",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 10",
+        "quote": "hypoxia+siHIF1A,3,24,92.0,1.21,15.5,0.30"
+      },
+      "value": 0.3,
+      "unit": null,
+      "resolved": {
+        "ok": true,
+        "file": "materials/experiment.csv",
+        "locator": "row 10",
+        "span": [
+          375,
+          415
+        ],
+        "reason": "verbatim match"
+      }
+    },
+    {
+      "id": "E21",
+      "claim": "control,0,3,1.03",
+      "kind": "number",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 2",
+        "quote": "control,0,3,1.03"
+      },
+      "value": 1.03,
+      "unit": null,
+      "resolved": {
+        "ok": true,
+        "file": "materials/timecourse.csv",
+        "locator": "row 2",
+        "span": [
+          33,
+          49
+        ],
+        "reason": "verbatim match"
+      }
+    },
+    {
+      "id": "E22",
+      "claim": "control,6,3,1.06",
+      "kind": "number",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 3",
+        "quote": "control,6,3,1.06"
+      },
+      "value": 1.06,
+      "unit": null,
+      "resolved": {
+        "ok": true,
+        "file": "materials/timecourse.csv",
+        "locator": "row 3",
+        "span": [
+          50,
+          66
+        ],
+        "reason": "verbatim match"
+      }
+    },
+    {
+      "id": "E23",
+      "claim": "control,12,3,0.99",
+      "kind": "number",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 4",
+        "quote": "control,12,3,0.99"
+      },
+      "value": 0.99,
+      "unit": null,
+      "resolved": {
+        "ok": true,
+        "file": "materials/timecourse.csv",
+        "locator": "row 4",
+        "span": [
+          67,
+          84
+        ],
+        "reason": "verbatim match"
+      }
+    },
+    {
+      "id": "E24",
+      "claim": "control,24,3,1.04",
       "kind": "number",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 5",
-        "quote": "normoxia,24,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0"
+        "quote": "control,24,3,1.04"
       },
-      "value": 98.0,
+      "value": 1.04,
       "unit": null,
       "resolved": {
         "ok": true,
         "file": "materials/timecourse.csv",
         "locator": "row 5",
         "span": [
-          399,
-          463
+          85,
+          102
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E34",
-      "claim": "hypoxia,0,6,1.2,1.1,1.1,1.0,0.42,42.1,11.7,53.8,12.5,18.6,97.0",
+      "id": "E25",
+      "claim": "hypoxia,0,3,1.19",
       "kind": "number",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 6",
-        "quote": "hypoxia,0,6,1.2,1.1,1.1,1.0,0.42,42.1,11.7,53.8,12.5,18.6,97.0"
+        "quote": "hypoxia,0,3,1.19"
       },
-      "value": 97.0,
+      "value": 1.19,
       "unit": null,
       "resolved": {
         "ok": true,
         "file": "materials/timecourse.csv",
         "locator": "row 6",
         "span": [
-          464,
-          526
+          103,
+          119
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E35",
-      "claim": "hypoxia,6,6,2.1,2.2,2.4,1.7,0.33,35.4,18.9,54.3,19.7,16.2,94.0",
+      "id": "E26",
+      "claim": "hypoxia,6,3,2.07",
       "kind": "number",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 7",
-        "quote": "hypoxia,6,6,2.1,2.2,2.4,1.7,0.33,35.4,18.9,54.3,19.7,16.2,94.0"
+        "quote": "hypoxia,6,3,2.07"
       },
-      "value": 94.0,
+      "value": 2.07,
       "unit": null,
       "resolved": {
         "ok": true,
         "file": "materials/timecourse.csv",
         "locator": "row 7",
         "span": [
-          527,
-          589
+          120,
+          136
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E36",
-      "claim": "hypoxia,12,6,2.6,3.0,3.5,2.3,0.24,28.1,27.4,55.5,27.2,13.9,88.0",
+      "id": "E27",
+      "claim": "hypoxia,12,3,2.62",
       "kind": "number",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 8",
-        "quote": "hypoxia,12,6,2.6,3.0,3.5,2.3,0.24,28.1,27.4,55.5,27.2,13.9,88.0"
+        "quote": "hypoxia,12,3,2.62"
       },
-      "value": 88.0,
+      "value": 2.62,
       "unit": null,
       "resolved": {
         "ok": true,
         "file": "materials/timecourse.csv",
         "locator": "row 8",
         "span": [
-          590,
-          653
+          137,
+          154
         ],
         "reason": "verbatim match"
       }
     },
     {
-      "id": "E37",
-      "claim": "hypoxia,24,6,2.8,3.4,4.1,2.6,0.19,23.8,34.2,58.0,31.8,12.4,82.0",
+      "id": "E28",
+      "claim": "hypoxia,24,3,2.83",
       "kind": "number",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 9",
-        "quote": "hypoxia,24,6,2.8,3.4,4.1,2.6,0.19,23.8,34.2,58.0,31.8,12.4,82.0"
+        "quote": "hypoxia,24,3,2.83"
       },
-      "value": 82.0,
+      "value": 2.83,
       "unit": null,
       "resolved": {
         "ok": true,
         "file": "materials/timecourse.csv",
         "locator": "row 9",
         "span": [
-          654,
-          717
+          155,
+          172
         ],
         "reason": "verbatim match"
       }
     }
   ],
   "change_records": [],
-  "uncertainty": {
-    "note": "no direct field mapping for this contract key; value is the run's actual product summary, not a substitute result",
-    "case_id": "SYNTHETIC-GA-001",
-    "primary_artifact": "figure.svg",
-    "artifacts": [
-      "export_report.json",
-      "figure.pdf",
-      "figure.png",
-      "figure.svg",
-      "figure_spec.resolved.json",
-      "scene.json",
-      "validation_report.json"
-    ],
-    "panels": [
-      "P1",
-      "P2",
-      "P3",
-      "P4"
-    ],
-    "evidence_items": 37
-  },
+  "uncertainty": [],
   "limitations": [],
   "audit": {
     "unfilled_fields": {},
     "unmapped_contract_keys": [
-      "uncertainty"
+      "reviewer_notes"
     ],
     "checks_ok": [
       "A",
@@ -935,26 +744,30 @@
       "F",
       "G",
       "H",
-      "I"
+      "I",
+      "J",
+      "L"
     ],
     "checks_failed": [],
-    "checks_warned": [],
+    "checks_warned": [
+      "K"
+    ],
     "determinism": {
       "identical": true,
       "hashes": {
         "figure.pdf": {
-          "run1": "5bcda6ce390a87a211b0ef294652a41ab9929ce28ce1c05ffa0e4dd43d9cadf2",
-          "run2": "5bcda6ce390a87a211b0ef294652a41ab9929ce28ce1c05ffa0e4dd43d9cadf2",
+          "run1": "4010ef82afebb80854c2410a9e9638e9dc724687a000751cc6ee71c734863c8a",
+          "run2": "4010ef82afebb80854c2410a9e9638e9dc724687a000751cc6ee71c734863c8a",
           "identical": true
         },
         "figure.png": {
-          "run1": "f7254d82f7e5823291023bfd2fb1fc4fc69215d3290f0a9baf7709ce2c4cb599",
-          "run2": "f7254d82f7e5823291023bfd2fb1fc4fc69215d3290f0a9baf7709ce2c4cb599",
+          "run1": "c6308839b5a26400c4be82e695ee15e8f0c0c554768d0db8497e82d2420b2dcd",
+          "run2": "c6308839b5a26400c4be82e695ee15e8f0c0c554768d0db8497e82d2420b2dcd",
           "identical": true
         },
         "figure.svg": {
-          "run1": "f50350f53c0abbd95eec5975bcf4cdfa7bf7743ac8f1e8b9032df989d1be3bd4",
-          "run2": "f50350f53c0abbd95eec5975bcf4cdfa7bf7743ac8f1e8b9032df989d1be3bd4",
+          "run1": "cd3eb7c6dc9fbf590744ee2bbbdf567ecd71bc7d74f736861280e27976b35616",
+          "run2": "cd3eb7c6dc9fbf590744ee2bbbdf567ecd71bc7d74f736861280e27976b35616",
           "identical": true
         }
       },
@@ -975,838 +788,839 @@
     }
   },
   "runtime": {
-    "skill": "graphical-abstract (ga.py)",
+    "skill": "source-bound-data-chart (chart.py)",
     "scene_version": "1.0",
     "python": "3.12.14",
     "platform": "win32",
     "dpi": 300
   },
   "contract_values": {
-    "case_id": "SYNTHETIC-GA-001",
+    "case_id": "SYNTHETIC-CHART-001",
     "figure_svg": "figure.svg",
     "figure_png": "figure.png",
     "figure_pdf": "figure.pdf",
     "figure_spec": "figure_spec.resolved.json",
-    "evidence": [
+    "mark_data_map": [
+      {
+        "panel": "P1",
+        "charts": [
+          {
+            "id": "C1",
+            "type": "bar",
+            "title": "",
+            "xlabel": "condition",
+            "ylabel": "cell viability",
+            "unit": "%",
+            "baseline": 0,
+            "axis": {
+              "y": {
+                "label": "cell viability",
+                "unit": "%",
+                "scale": "linear",
+                "tick_start": 0,
+                "tick_end": 120,
+                "tick_step": 20
+              }
+            },
+            "series": [
+              {
+                "name": "control",
+                "column": "cell_viability_pct",
+                "values": [
+                  99.1
+                ],
+                "errors": [
+                  0.65574385243
+                ],
+                "error_kind": "sd",
+                "n": 3,
+                "color": "#0072B2",
+                "derived": true,
+                "source_values": [
+                  99.2,
+                  98.4,
+                  99.7
+                ],
+                "sources": [
+                  "E1",
+                  "E2",
+                  "E3"
+                ]
+              },
+              {
+                "name": "hypoxia",
+                "column": "cell_viability_pct",
+                "values": [
+                  83.133333333333
+                ],
+                "errors": [
+                  1.106044001536
+                ],
+                "error_kind": "sd",
+                "n": 3,
+                "color": "#E69F00",
+                "derived": true,
+                "source_values": [
+                  82.1,
+                  84.3,
+                  83.0
+                ],
+                "sources": [
+                  "E4",
+                  "E5",
+                  "E6"
+                ]
+              },
+              {
+                "name": "hypoxia+siHIF1A",
+                "column": "cell_viability_pct",
+                "values": [
+                  91.2
+                ],
+                "errors": [
+                  0.8
+                ],
+                "error_kind": "sd",
+                "n": 3,
+                "color": "#009E73",
+                "derived": true,
+                "source_values": [
+                  91.2,
+                  90.4,
+                  92.0
+                ],
+                "sources": [
+                  "E7",
+                  "E8",
+                  "E9"
+                ]
+              }
+            ],
+            "significance": [
+              {
+                "between": [
+                  "control",
+                  "hypoxia"
+                ],
+                "label": "differs",
+                "defined_in_caption": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "panel": "P2",
+        "charts": [
+          {
+            "id": "C2",
+            "type": "line",
+            "xlabel": "time",
+            "ylabel": "mitoSOX signal",
+            "unit": "fold",
+            "x_unit": "h",
+            "x": {
+              "label": "time (h)",
+              "values": [
+                0.0,
+                6.0,
+                12.0,
+                24.0
+              ]
+            },
+            "axis": {
+              "x": {
+                "label": "time",
+                "unit": "h",
+                "scale": "linear",
+                "tick_start": 0,
+                "tick_end": 24,
+                "tick_step": 6
+              },
+              "y": {
+                "label": "mitoSOX signal",
+                "unit": "fold",
+                "scale": "linear",
+                "tick_start": 0,
+                "tick_end": 3,
+                "tick_step": 1
+              }
+            },
+            "series": [
+              {
+                "name": "control",
+                "column": "mito_ros_fold",
+                "x": [
+                  0.0,
+                  6.0,
+                  12.0,
+                  24.0
+                ],
+                "values": [
+                  1.03,
+                  1.06,
+                  0.99,
+                  1.04
+                ],
+                "n": 3,
+                "color": "#0072B2",
+                "sources": [
+                  "E10",
+                  "E11",
+                  "E12",
+                  "E13"
+                ]
+              },
+              {
+                "name": "hypoxia",
+                "column": "mito_ros_fold",
+                "x": [
+                  0.0,
+                  6.0,
+                  12.0,
+                  24.0
+                ],
+                "values": [
+                  1.19,
+                  2.07,
+                  2.62,
+                  2.83
+                ],
+                "n": 3,
+                "color": "#E69F00",
+                "sources": [
+                  "E14",
+                  "E15",
+                  "E16",
+                  "E17"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "source_map": [
       {
         "id": "E1",
-        "claim": "Title: Mitochondrial ROS relay stabilises HIF-1alpha and reprograms substrate use in hypoxic cardiomyocytes",
-        "kind": "relation",
+        "claim": "Measurement note (authoritative source statement for this fixture)",
+        "kind": "condition",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L3-5",
-          "quote": "Title: Mitochondrial ROS relay stabilises HIF-1alpha and reprograms substrate use in hypoxic cardiomyocytes"
+          "file": "materials/methods.md",
+          "locator": "L3",
+          "quote": "Measurement note (authoritative source statement for this fixture)"
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L3-4",
+          "file": "materials/methods.md",
+          "locator": "L3",
           "span": [
-            64,
-            171
+            67,
+            133
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E2",
-        "claim": "Cardiomyocytes exposed to ischaemia face a fall in oxygen availability.",
-        "kind": "condition",
+        "claim": "H9c2 cardiomyoblasts were exposed for 24 h to normoxia (control), 1% O2 (hypoxia), or 1% O2 after HIF-1A knockdown (hypoxia+siHIF1A).",
+        "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L7",
-          "quote": "Cardiomyocytes exposed to ischaemia face a fall in oxygen availability."
+          "file": "materials/methods.md",
+          "locator": "L5",
+          "quote": "H9c2 cardiomyoblasts were exposed for 24 h to normoxia (control), 1% O2 (hypoxia), or 1% O2 after HIF-1A knockdown (hypoxia+siHIF1A)."
         },
-        "value": null,
-        "unit": null,
+        "value": 1.0,
+        "unit": "percent",
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L7",
+          "file": "materials/methods.md",
+          "locator": "L5",
           "span": [
-            187,
-            258
+            135,
+            268
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E3",
-        "claim": "Mitochondrial reactive oxygen species (ROS) rise within minutes of hypoxia and have been proposed to act as a signalling relay rather than only as damage.",
-        "kind": "condition",
+        "claim": "Cell viability was measured at 24 h with three biological replicates per condition.",
+        "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L8-9",
-          "quote": "Mitochondrial reactive oxygen species (ROS) rise within minutes of hypoxia and have been proposed to act as a signalling relay rather than only as damage."
+          "file": "materials/methods.md",
+          "locator": "L6",
+          "quote": "Cell viability was measured at 24 h with three biological replicates per condition."
         },
-        "value": null,
+        "value": 24.0,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L8-9",
+          "file": "materials/methods.md",
+          "locator": "L6",
           "span": [
-            259,
-            413
+            269,
+            352
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E4",
-        "claim": "Whether that relay is what stabilises HIF-1alpha, and how the cell keeps ATP supply while glucose oxidation is suppressed, remains unresolved.",
-        "kind": "relation",
+        "claim": "Each bar in the example figure is the mean of the three replicates;",
+        "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L10-11",
-          "quote": "Whether that relay is what stabilises HIF-1alpha, and how the cell keeps ATP supply while glucose oxidation is suppressed, remains unresolved."
+          "file": "materials/methods.md",
+          "locator": "L7",
+          "quote": "Each bar in the example figure is the mean of the three replicates;"
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L10-11",
+          "file": "materials/methods.md",
+          "locator": "L7",
           "span": [
-            414,
-            556
+            353,
+            420
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E5",
-        "claim": "H9c2 cardiomyoblasts were exposed to 1% O2 for 24 h (hypoxia) or 21% O2 (normoxia).",
-        "kind": "number",
+        "claim": "the error bars are one standard deviation (SD) around that mean.",
+        "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L14-15",
-          "quote": "H9c2 cardiomyoblasts were exposed to 1% O2 for 24 h (hypoxia) or 21% O2 (normoxia)."
+          "file": "materials/methods.md",
+          "locator": "L7",
+          "quote": "the error bars are one standard deviation (SD) around that mean."
         },
-        "value": 21.0,
-        "unit": "percent",
+        "value": null,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L14-15",
+          "file": "materials/methods.md",
+          "locator": "L7",
           "span": [
-            569,
-            652
+            421,
+            485
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E6",
-        "claim": "Mitochondrial ROS were measured with MitoSOX.",
-        "kind": "condition",
+        "claim": "Mitochondrial ROS in the example time course are group means and are reported as fold change relative to the 0 h normoxia sample.",
+        "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L15",
-          "quote": "Mitochondrial ROS were measured with MitoSOX."
+          "file": "materials/methods.md",
+          "locator": "L8",
+          "quote": "Mitochondrial ROS in the example time course are group means and are reported as fold change relative to the 0 h normoxia sample."
         },
-        "value": null,
-        "unit": null,
+        "value": 0.0,
+        "unit": "fold",
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L15",
+          "file": "materials/methods.md",
+          "locator": "L8",
           "span": [
-            653,
-            698
+            486,
+            615
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E7",
-        "claim": "HIF-1alpha protein was quantified by immunoblot.",
-        "kind": "condition",
+        "claim": "The source release reports that viability in hypoxia differs from the control;",
+        "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L15-16",
-          "quote": "HIF-1alpha protein was quantified by immunoblot."
+          "file": "materials/methods.md",
+          "locator": "L9",
+          "quote": "The source release reports that viability in hypoxia differs from the control;"
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L15-16",
+          "file": "materials/methods.md",
+          "locator": "L9",
           "span": [
-            699,
-            747
+            616,
+            694
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E8",
-        "claim": "Transcripts were measured by RT-qPCR.",
-        "kind": "condition",
+        "claim": "it does not state a p-value for that comparison.",
+        "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L16",
-          "quote": "Transcripts were measured by RT-qPCR."
+          "file": "materials/methods.md",
+          "locator": "L9",
+          "quote": "it does not state a p-value for that comparison."
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L16",
+          "file": "materials/methods.md",
+          "locator": "L9",
           "span": [
-            748,
-            785
+            695,
+            743
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E9",
-        "claim": "Substrate use was resolved with a Seahorse assay using glucose or palmitate.",
-        "kind": "condition",
+        "claim": "Therefore the example marks the reported comparison without claiming a p-value.",
+        "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L16-17",
-          "quote": "Substrate use was resolved with a Seahorse assay using glucose or palmitate."
+          "file": "materials/methods.md",
+          "locator": "L10",
+          "quote": "Therefore the example marks the reported comparison without claiming a p-value."
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L16-17",
+          "file": "materials/methods.md",
+          "locator": "L10",
           "span": [
-            786,
-            862
+            744,
+            823
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E10",
-        "claim": "ATP content was normalised to total protein.",
+        "claim": "The draft caption supplied with this fixture is out of date and is not the source of truth.",
         "kind": "condition",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L17-18",
-          "quote": "ATP content was normalised to total protein."
+          "file": "materials/methods.md",
+          "locator": "L11",
+          "quote": "The draft caption supplied with this fixture is out of date and is not the source of truth."
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L17-18",
+          "file": "materials/methods.md",
+          "locator": "L11",
           "span": [
-            863,
-            907
+            824,
+            915
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E11",
-        "claim": "HIF-1alpha and NRF2 were knocked down with siRNA.",
+        "claim": "Units: viability in percent (%), mitochondrial ROS as fold change, time in hours (h).",
         "kind": "entity",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L18",
-          "quote": "HIF-1alpha and NRF2 were knocked down with siRNA."
+          "file": "materials/methods.md",
+          "locator": "L12",
+          "quote": "Units: viability in percent (%), mitochondrial ROS as fold change, time in hours (h)."
         },
         "value": null,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L18",
+          "file": "materials/methods.md",
+          "locator": "L12",
           "span": [
-            908,
-            957
+            916,
+            1001
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E12",
-        "claim": "Hypoxia raised mitochondrial ROS 2.8-fold (MitoSOX, normoxia 1.0) and stabilised HIF-1alpha protein 3.4-fold.",
+        "claim": "control,1,24,99.2,1.02,18.6,0.42",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L21-22",
-          "quote": "Hypoxia raised mitochondrial ROS 2.8-fold (MitoSOX, normoxia 1.0) and stabilised HIF-1alpha protein 3.4-fold."
+          "file": "materials/experiment.csv",
+          "locator": "row 2",
+          "quote": "control,1,24,99.2,1.02,18.6,0.42"
         },
-        "value": 3.4,
-        "unit": "fold",
+        "value": 0.42,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L21-22",
+          "file": "materials/experiment.csv",
+          "locator": "row 2",
           "span": [
-            970,
-            1079
+            95,
+            127
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E13",
-        "claim": "HIF-1alpha knockdown abolished the rise in LDHA mRNA (4.1-fold in hypoxia, 1.1-fold after knockdown) and in PDK1 mRNA (2.6-fold, 1.0-fold), showing that LDHA and PDK1 transcription is HIF-1alpha dependent.",
+        "claim": "control,2,24,98.4,0.97,18.9,0.41",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L22-24",
-          "quote": "HIF-1alpha knockdown abolished the rise in LDHA mRNA (4.1-fold in hypoxia, 1.1-fold after knockdown) and in PDK1 mRNA (2.6-fold, 1.0-fold), showing that LDHA and PDK1 transcription is HIF-1alpha dependent."
+          "file": "materials/experiment.csv",
+          "locator": "row 3",
+          "quote": "control,2,24,98.4,0.97,18.9,0.41"
         },
-        "value": 1.0,
-        "unit": "fold",
+        "value": 0.41,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L22-24",
+          "file": "materials/experiment.csv",
+          "locator": "row 3",
           "span": [
-            1080,
-            1285
+            128,
+            160
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E14",
-        "claim": "PDK1 phosphorylated PDH at Ser293 3.1-fold, and PDH catalytic activity fell from 0.42 to 0.19 per second.",
+        "claim": "control,3,24,99.7,1.01,18.3,0.42",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L25-26",
-          "quote": "PDK1 phosphorylated PDH at Ser293 3.1-fold, and PDH catalytic activity fell from 0.42 to 0.19 per second."
+          "file": "materials/experiment.csv",
+          "locator": "row 4",
+          "quote": "control,3,24,99.7,1.01,18.3,0.42"
         },
-        "value": 0.19,
-        "unit": "per second",
+        "value": 0.42,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L25-26",
+          "file": "materials/experiment.csv",
+          "locator": "row 4",
           "span": [
-            1286,
-            1391
+            161,
+            193
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E15",
-        "claim": "Glucose-supported oxygen consumption fell from 42.3 to 23.8 pmol per minute, while palmitate-supported oxygen consumption rose from 11.6 to 34.2 pmol per minute;",
+        "claim": "hypoxia,1,24,82.1,2.74,12.6,0.19",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L26-28",
-          "quote": "Glucose-supported oxygen consumption fell from 42.3 to 23.8 pmol per minute, while palmitate-supported oxygen consumption rose from 11.6 to 34.2 pmol per minute;"
+          "file": "materials/experiment.csv",
+          "locator": "row 5",
+          "quote": "hypoxia,1,24,82.1,2.74,12.6,0.19"
         },
-        "value": 34.2,
-        "unit": "pmol/min",
+        "value": 0.19,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L26-28",
+          "file": "materials/experiment.csv",
+          "locator": "row 5",
           "span": [
-            1392,
-            1553
+            194,
+            226
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E16",
-        "claim": "total oxygen consumption was therefore maintained (53.9 to 58.0 pmol per minute).",
+        "claim": "hypoxia,2,24,84.3,2.88,12.1,0.20",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L28-29",
-          "quote": "total oxygen consumption was therefore maintained (53.9 to 58.0 pmol per minute)."
+          "file": "materials/experiment.csv",
+          "locator": "row 6",
+          "quote": "hypoxia,2,24,84.3,2.88,12.1,0.20"
         },
-        "value": 58.0,
-        "unit": "pmol/min",
+        "value": 0.2,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L28-29",
+          "file": "materials/experiment.csv",
+          "locator": "row 6",
           "span": [
-            1554,
-            1635
+            227,
+            259
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E17",
-        "claim": "ATP content fell modestly, from 18.7 to 12.4 nanomoles per milligram of protein.",
+        "claim": "hypoxia,3,24,83.0,2.81,12.4,0.19",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L29-30",
-          "quote": "ATP content fell modestly, from 18.7 to 12.4 nanomoles per milligram of protein."
+          "file": "materials/experiment.csv",
+          "locator": "row 7",
+          "quote": "hypoxia,3,24,83.0,2.81,12.4,0.19"
         },
-        "value": 12.4,
-        "unit": "nmol/mg",
+        "value": 0.19,
+        "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L29-30",
+          "file": "materials/experiment.csv",
+          "locator": "row 7",
           "span": [
-            1636,
-            1716
+            260,
+            292
           ],
           "reason": "verbatim match"
         }
       },
       {
         "id": "E18",
-        "claim": "Extracellular acidification rate rose from 12.4 to 31.8 milli-pH units per minute, consistent with increased glycolytic flux.",
+        "claim": "hypoxia+siHIF1A,1,24,91.2,1.15,15.8,0.28",
         "kind": "number",
         "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L30-31",
-          "quote": "Extracellular acidification rate rose from 12.4 to 31.8 milli-pH units per minute, consistent with increased glycolytic flux."
+          "file": "materials/experiment.csv",
+          "locator": "row 8",
+          "quote": "hypoxia+siHIF1A,1,24,91.2,1.15,15.8,0.28"
         },
-        "value": 31.8,
-        "unit": "mpH/min",
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L30-31",
-          "span": [
-            1717,
-            1842
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E19",
-        "claim": "NRF2 nuclear translocation increased 3.2-fold and its targets NQO1 and HMOX1 rose 2.9-fold and 2.4-fold.",
-        "kind": "number",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L32-33",
-          "quote": "NRF2 nuclear translocation increased 3.2-fold and its targets NQO1 and HMOX1 rose 2.9-fold and 2.4-fold."
-        },
-        "value": 2.4,
-        "unit": "fold",
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L32-33",
-          "span": [
-            1843,
-            1947
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E20",
-        "claim": "NRF2 knockdown raised mitochondrial ROS further, from 2.8-fold to 4.6-fold, and combined HIF-1alpha plus NRF2 knockdown reduced viability from 92 percent to 54 percent.",
-        "kind": "number",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L33-35",
-          "quote": "NRF2 knockdown raised mitochondrial ROS further, from 2.8-fold to 4.6-fold, and combined HIF-1alpha plus NRF2 knockdown reduced viability from 92 percent to 54 percent."
-        },
-        "value": 54.0,
-        "unit": "percent",
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L33-35",
-          "span": [
-            1948,
-            2116
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E21",
-        "claim": "Mitochondrial ROS act upstream of HIF-1alpha in hypoxic cardiomyocytes.",
-        "kind": "entity",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L38",
-          "quote": "Mitochondrial ROS act upstream of HIF-1alpha in hypoxic cardiomyocytes."
-        },
-        "value": null,
+        "value": 0.28,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L38",
+          "file": "materials/experiment.csv",
+          "locator": "row 8",
           "span": [
-            2132,
-            2203
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E22",
-        "claim": "The HIF-1alpha-PDK1 arm suppresses glucose oxidation without collapsing total oxygen consumption, because fatty acid oxidation compensates.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L38-40",
-          "quote": "The HIF-1alpha-PDK1 arm suppresses glucose oxidation without collapsing total oxygen consumption, because fatty acid oxidation compensates."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L38-40",
-          "span": [
-            2204,
-            2343
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E23",
-        "claim": "NRF2 restrains the ROS signal, and losing both arms together costs viability.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L40-41",
-          "quote": "NRF2 restrains the ROS signal, and losing both arms together costs viability."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L40-41",
-          "span": [
-            2344,
-            2421
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E24",
-        "claim": "Mitochondrial ROS relay in hypoxic cardiomyocytes.",
-        "kind": "entity",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L44",
-          "quote": "Mitochondrial ROS relay in hypoxic cardiomyocytes."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L44",
-          "span": [
-            2474,
-            2524
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E25",
-        "claim": "Hypoxia increases mitochondrial ROS, which stabilises HIF-1alpha.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L44-45",
-          "quote": "Hypoxia increases mitochondrial ROS, which stabilises HIF-1alpha."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L44-45",
-          "span": [
-            2525,
-            2590
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E26",
-        "claim": "HIF-1alpha drives LDHA and PDK1;",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L45",
-          "quote": "HIF-1alpha drives LDHA and PDK1;"
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L45",
-          "span": [
-            2591,
-            2623
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E27",
-        "claim": "PDK1 phosphorylates PDH at Ser293 and lowers PDH activity, suppressing glucose-supported oxygen consumption while palmitate-supported oxygen consumption rises, so total oxygen consumption is maintained.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L46-48",
-          "quote": "PDK1 phosphorylates PDH at Ser293 and lowers PDH activity, suppressing glucose-supported oxygen consumption while palmitate-supported oxygen consumption rises, so total oxygen consumption is maintained."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L46-48",
-          "span": [
-            2624,
-            2826
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E28",
-        "claim": "NRF2 translocates to the nucleus and induces NQO1 and HMOX1, which restrain ROS.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L48-49",
-          "quote": "NRF2 translocates to the nucleus and induces NQO1 and HMOX1, which restrain ROS."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L48-49",
-          "span": [
-            2827,
-            2907
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E29",
-        "claim": "Combined loss of HIF-1alpha and NRF2 reduces viability.",
-        "kind": "relation",
-        "source": {
-          "file": "materials/paper-excerpt.md",
-          "locator": "L49-50",
-          "quote": "Combined loss of HIF-1alpha and NRF2 reduces viability."
-        },
-        "value": null,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/paper-excerpt.md",
-          "locator": "L49-50",
-          "span": [
-            2908,
-            2963
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E30",
-        "claim": "normoxia,0,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0",
-        "kind": "number",
-        "source": {
-          "file": "materials/timecourse.csv",
-          "locator": "row 2",
-          "quote": "normoxia,0,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0"
-        },
-        "value": 98.0,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/timecourse.csv",
-          "locator": "row 2",
-          "span": [
-            206,
-            269
-          ],
-          "reason": "verbatim match"
-        }
-      },
-      {
-        "id": "E31",
-        "claim": "normoxia,6,6,1.1,1.0,1.0,1.0,0.41,42.0,11.8,53.8,12.6,18.5,98.0",
-        "kind": "number",
-        "source": {
-          "file": "materials/timecourse.csv",
-          "locator": "row 3",
-          "quote": "normoxia,6,6,1.1,1.0,1.0,1.0,0.41,42.0,11.8,53.8,12.6,18.5,98.0"
-        },
-        "value": 98.0,
-        "unit": null,
-        "resolved": {
-          "ok": true,
-          "file": "materials/timecourse.csv",
-          "locator": "row 3",
-          "span": [
-            270,
+            293,
             333
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E32",
-        "claim": "normoxia,12,6,1.0,1.1,1.1,1.0,0.42,42.6,11.5,54.1,12.3,18.8,97.0",
+        "id": "E19",
+        "claim": "hypoxia+siHIF1A,2,24,90.4,1.09,16.2,0.29",
         "kind": "number",
         "source": {
-          "file": "materials/timecourse.csv",
-          "locator": "row 4",
-          "quote": "normoxia,12,6,1.0,1.1,1.1,1.0,0.42,42.6,11.5,54.1,12.3,18.8,97.0"
+          "file": "materials/experiment.csv",
+          "locator": "row 9",
+          "quote": "hypoxia+siHIF1A,2,24,90.4,1.09,16.2,0.29"
         },
-        "value": 97.0,
+        "value": 0.29,
         "unit": null,
         "resolved": {
           "ok": true,
-          "file": "materials/timecourse.csv",
-          "locator": "row 4",
+          "file": "materials/experiment.csv",
+          "locator": "row 9",
           "span": [
             334,
-            398
+            374
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E33",
-        "claim": "normoxia,24,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0",
+        "id": "E20",
+        "claim": "hypoxia+siHIF1A,3,24,92.0,1.21,15.5,0.30",
+        "kind": "number",
+        "source": {
+          "file": "materials/experiment.csv",
+          "locator": "row 10",
+          "quote": "hypoxia+siHIF1A,3,24,92.0,1.21,15.5,0.30"
+        },
+        "value": 0.3,
+        "unit": null,
+        "resolved": {
+          "ok": true,
+          "file": "materials/experiment.csv",
+          "locator": "row 10",
+          "span": [
+            375,
+            415
+          ],
+          "reason": "verbatim match"
+        }
+      },
+      {
+        "id": "E21",
+        "claim": "control,0,3,1.03",
+        "kind": "number",
+        "source": {
+          "file": "materials/timecourse.csv",
+          "locator": "row 2",
+          "quote": "control,0,3,1.03"
+        },
+        "value": 1.03,
+        "unit": null,
+        "resolved": {
+          "ok": true,
+          "file": "materials/timecourse.csv",
+          "locator": "row 2",
+          "span": [
+            33,
+            49
+          ],
+          "reason": "verbatim match"
+        }
+      },
+      {
+        "id": "E22",
+        "claim": "control,6,3,1.06",
+        "kind": "number",
+        "source": {
+          "file": "materials/timecourse.csv",
+          "locator": "row 3",
+          "quote": "control,6,3,1.06"
+        },
+        "value": 1.06,
+        "unit": null,
+        "resolved": {
+          "ok": true,
+          "file": "materials/timecourse.csv",
+          "locator": "row 3",
+          "span": [
+            50,
+            66
+          ],
+          "reason": "verbatim match"
+        }
+      },
+      {
+        "id": "E23",
+        "claim": "control,12,3,0.99",
+        "kind": "number",
+        "source": {
+          "file": "materials/timecourse.csv",
+          "locator": "row 4",
+          "quote": "control,12,3,0.99"
+        },
+        "value": 0.99,
+        "unit": null,
+        "resolved": {
+          "ok": true,
+          "file": "materials/timecourse.csv",
+          "locator": "row 4",
+          "span": [
+            67,
+            84
+          ],
+          "reason": "verbatim match"
+        }
+      },
+      {
+        "id": "E24",
+        "claim": "control,24,3,1.04",
         "kind": "number",
         "source": {
           "file": "materials/timecourse.csv",
           "locator": "row 5",
-          "quote": "normoxia,24,6,1.0,1.0,1.0,1.0,0.42,42.3,11.6,53.9,12.4,18.7,98.0"
+          "quote": "control,24,3,1.04"
         },
-        "value": 98.0,
+        "value": 1.04,
         "unit": null,
         "resolved": {
           "ok": true,
           "file": "materials/timecourse.csv",
           "locator": "row 5",
           "span": [
-            399,
-            463
+            85,
+            102
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E34",
-        "claim": "hypoxia,0,6,1.2,1.1,1.1,1.0,0.42,42.1,11.7,53.8,12.5,18.6,97.0",
+        "id": "E25",
+        "claim": "hypoxia,0,3,1.19",
         "kind": "number",
         "source": {
           "file": "materials/timecourse.csv",
           "locator": "row 6",
-          "quote": "hypoxia,0,6,1.2,1.1,1.1,1.0,0.42,42.1,11.7,53.8,12.5,18.6,97.0"
+          "quote": "hypoxia,0,3,1.19"
         },
-        "value": 97.0,
+        "value": 1.19,
         "unit": null,
         "resolved": {
           "ok": true,
           "file": "materials/timecourse.csv",
           "locator": "row 6",
           "span": [
-            464,
-            526
+            103,
+            119
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E35",
-        "claim": "hypoxia,6,6,2.1,2.2,2.4,1.7,0.33,35.4,18.9,54.3,19.7,16.2,94.0",
+        "id": "E26",
+        "claim": "hypoxia,6,3,2.07",
         "kind": "number",
         "source": {
           "file": "materials/timecourse.csv",
           "locator": "row 7",
-          "quote": "hypoxia,6,6,2.1,2.2,2.4,1.7,0.33,35.4,18.9,54.3,19.7,16.2,94.0"
+          "quote": "hypoxia,6,3,2.07"
         },
-        "value": 94.0,
+        "value": 2.07,
         "unit": null,
         "resolved": {
           "ok": true,
           "file": "materials/timecourse.csv",
           "locator": "row 7",
           "span": [
-            527,
-            589
+            120,
+            136
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E36",
-        "claim": "hypoxia,12,6,2.6,3.0,3.5,2.3,0.24,28.1,27.4,55.5,27.2,13.9,88.0",
+        "id": "E27",
+        "claim": "hypoxia,12,3,2.62",
         "kind": "number",
         "source": {
           "file": "materials/timecourse.csv",
           "locator": "row 8",
-          "quote": "hypoxia,12,6,2.6,3.0,3.5,2.3,0.24,28.1,27.4,55.5,27.2,13.9,88.0"
+          "quote": "hypoxia,12,3,2.62"
         },
-        "value": 88.0,
+        "value": 2.62,
         "unit": null,
         "resolved": {
           "ok": true,
           "file": "materials/timecourse.csv",
           "locator": "row 8",
           "span": [
-            590,
-            653
+            137,
+            154
           ],
           "reason": "verbatim match"
         }
       },
       {
-        "id": "E37",
-        "claim": "hypoxia,24,6,2.8,3.4,4.1,2.6,0.19,23.8,34.2,58.0,31.8,12.4,82.0",
+        "id": "E28",
+        "claim": "hypoxia,24,3,2.83",
         "kind": "number",
         "source": {
           "file": "materials/timecourse.csv",
           "locator": "row 9",
-          "quote": "hypoxia,24,6,2.8,3.4,4.1,2.6,0.19,23.8,34.2,58.0,31.8,12.4,82.0"
+          "quote": "hypoxia,24,3,2.83"
         },
-        "value": 82.0,
+        "value": 2.83,
         "unit": null,
         "resolved": {
           "ok": true,
           "file": "materials/timecourse.csv",
           "locator": "row 9",
           "span": [
-            654,
-            717
+            155,
+            172
           ],
           "reason": "verbatim match"
         }
       }
     ],
-    "status": "ok",
-    "uncertainty": {
+    "reviewer_notes": {
       "note": "no direct field mapping for this contract key; value is the run's actual product summary, not a substitute result",
-      "case_id": "SYNTHETIC-GA-001",
+      "case_id": "SYNTHETIC-CHART-001",
       "primary_artifact": "figure.svg",
       "artifacts": [
         "export_report.json",
@@ -1814,20 +1628,42 @@
         "figure.png",
         "figure.svg",
         "figure_spec.resolved.json",
+        "mark_data_map.json",
         "scene.json",
+        "source_map.json",
         "validation_report.json"
       ],
       "panels": [
         "P1",
-        "P2",
-        "P3",
-        "P4"
+        "P2"
       ],
-      "evidence_items": 37
-    }
+      "evidence_items": 28
+    },
+    "status": "ok"
   },
   "figure_svg": "figure.svg",
   "figure_png": "figure.png",
   "figure_pdf": "figure.pdf",
-  "figure_spec": "figure_spec.resolved.json"
+  "figure_spec": "figure_spec.resolved.json",
+  "reviewer_notes": {
+    "note": "no direct field mapping for this contract key; value is the run's actual product summary, not a substitute result",
+    "case_id": "SYNTHETIC-CHART-001",
+    "primary_artifact": "figure.svg",
+    "artifacts": [
+      "export_report.json",
+      "figure.pdf",
+      "figure.png",
+      "figure.svg",
+      "figure_spec.resolved.json",
+      "mark_data_map.json",
+      "scene.json",
+      "source_map.json",
+      "validation_report.json"
+    ],
+    "panels": [
+      "P1",
+      "P2"
+    ],
+    "evidence_items": 28
+  }
 }
