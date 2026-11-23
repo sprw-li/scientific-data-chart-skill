@@ -1,0 +1,27 @@
+{
+  "id": "science",
+  "name": "Science (AAAS)",
+  "default_columns": 1,
+  "canvas_mm": {"single": 55.0, "double": 120.0, "height": 70.0},
+  "dpi": 300,
+  "font_sizes_pt": {"body": 7.0, "label": 7.0, "panel_title": 8.0, "main_title": 11.0, "legend": 6.0},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "palette_id": "okabe-ito",
+  "margins_mm": {"left": 10.0, "right": 2.5, "top": 3.0, "bottom": 8.0},
+  "panel_label_style": {"case": "upper", "weight": "bold", "position": "top-left", "size_pt": 8.0},
+  "font_family_stack": ["Helvetica", "Arial", "DejaVu Sans", "sans-serif"],
+  "cjk_fallback_stack": ["Microsoft YaHei", "SimHei", "Noto Sans SC", "sans-serif"],
+  "tick_style": {"direction": "out", "length_mm": 1.0, "label_size_pt": 7.0},
+  "notes": "Science column widths are narrow (55 mm); charts at this width get a single-column plot area and the horizontal gutter is reduced by the layout engine rather than by shrinking type.",
+  "source": "Science (AAAS) information for authors, 'Figures and tables' (https://www.science.org/content/page/instructions-authors): 1 column 5.5 cm, 2 columns 12 cm, 3 columns 18.3 cm; sans-serif (Helvetica) labels. Widths from the guideline; pt/margins/height are working values (see param_source).",
+  "param_source": {
+    "canvas_mm.single": {"kind": "guideline", "detail": "5.5 cm = 55 mm one-column width"},
+    "canvas_mm.double": {"kind": "guideline", "detail": "12 cm = 120 mm two-column width"},
+    "canvas_mm.height": {"kind": "convention", "detail": "working default; overridable via meta.canvas.h_mm"},
+    "dpi": {"kind": "guideline", "detail": ">=300 dpi raster artwork"},
+    "font_sizes_pt": {"kind": "convention", "detail": "rounded working sizes clamped to contract floors"},
+    "line_widths_pt": {"kind": "convention", "detail": "working values"},
+    "margins_mm": {"kind": "convention", "detail": "working margins"},
+    "palette_id": {"kind": "convention", "detail": "Okabe-Ito CVD-safe palette, not an AAAS-mandated scheme"}
+  }
+}

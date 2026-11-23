@@ -1,0 +1,27 @@
+{
+  "id": "ieee",
+  "name": "IEEE Transactions",
+  "default_columns": 1,
+  "canvas_mm": {"single": 88.9, "double": 181.9, "height": 80.0},
+  "dpi": 300,
+  "font_sizes_pt": {"body": 8.0, "label": 8.0, "panel_title": 8.0, "main_title": 11.0, "legend": 8.0},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "palette_id": "okabe-ito",
+  "margins_mm": {"left": 12.0, "right": 3.0, "top": 3.0, "bottom": 8.0},
+  "panel_label_style": {"case": "lower", "weight": "bold", "position": "top-left", "size_pt": 8.0},
+  "font_family_stack": ["Times New Roman", "Nimbus Roman", "DejaVu Serif", "serif"],
+  "cjk_fallback_stack": ["SimSun", "Noto Serif SC", "Microsoft YaHei", "sans-serif"],
+  "tick_style": {"direction": "in", "length_mm": 1.0, "label_size_pt": 8.0},
+  "notes": "IEEE uses a serif face (Times) at 8 pt for figure lettering; the 8 pt body size is why the type floors in the contract (7 pt body) are not the binding constraint here.",
+  "source": "IEEE author guidelines for transactions/journals (https://journals.ieeeauthorcenter.ieee.org/): single-column width 3.5 in = 88.9 mm, double-column 7.16 in = 181.9 mm; figure lettering Times New Roman 8 pt. Widths and face/size from the guideline; margins/height are working values (see param_source).",
+  "param_source": {
+    "canvas_mm.single": {"kind": "guideline", "detail": "3.5 in = 88.9 mm single-column width"},
+    "canvas_mm.double": {"kind": "guideline", "detail": "7.16 in = 181.9 mm double-column width"},
+    "canvas_mm.height": {"kind": "convention", "detail": "working default; overridable"},
+    "dpi": {"kind": "guideline", "detail": ">=300 dpi raster artwork"},
+    "font_sizes_pt": {"kind": "guideline", "detail": "Times New Roman 8 pt for figure lettering"},
+    "line_widths_pt": {"kind": "convention", "detail": "working values"},
+    "margins_mm": {"kind": "convention", "detail": "working margins"},
+    "palette_id": {"kind": "convention", "detail": "Okabe-Ito CVD-safe palette"}
+  }
+}

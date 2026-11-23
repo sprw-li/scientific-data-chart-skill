@@ -1,0 +1,510 @@
+{
+  "meta": {
+    "case_id": "SYNTHETIC-CHART-001",
+    "language": "en",
+    "preset": "nature-single",
+    "figure_id": "figure03",
+    "title": "HIF-1A knockdown partly rescues viability under hypoxia",
+    "caption": "Cell viability (mean +/- SD, n = 3) in control, hypoxia and hypoxia+siHIF1A after 24 h, and the mitochondrial ROS time course (mean, n = 3) over 24 h. Hypoxia differs from the control as reported in the source note; no p-value was stated.",
+    "canvas": {
+      "w_mm": 120,
+      "h_mm": 90,
+      "dpi": 300
+    }
+  },
+  "palette": {
+    "id": "okabe-ito"
+  },
+  "texts": {
+    "title": "HIF-1A knockdown partly rescues viability under hypoxia",
+    "caption": "Cell viability (mean +/- SD, n = 3) in control, hypoxia and hypoxia+siHIF1A after 24 h, and the mitochondrial ROS time course (mean, n = 3) over 24 h. Hypoxia differs from the control as reported in the source note; no p-value was stated."
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "kind": "number",
+      "claim": "control replicate 1 cell viability is 99.2 % at 24 h",
+      "value": 99.2,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 2",
+        "quote": "control,1,24,99.2,1.02,18.6,0.42"
+      }
+    },
+    {
+      "id": "E2",
+      "kind": "number",
+      "claim": "control replicate 2 cell viability is 98.4 % at 24 h",
+      "value": 98.4,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 3",
+        "quote": "control,2,24,98.4,0.97,18.9,0.41"
+      }
+    },
+    {
+      "id": "E3",
+      "kind": "number",
+      "claim": "control replicate 3 cell viability is 99.7 % at 24 h",
+      "value": 99.7,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 4",
+        "quote": "control,3,24,99.7,1.01,18.3,0.42"
+      }
+    },
+    {
+      "id": "E4",
+      "kind": "number",
+      "claim": "hypoxia replicate 1 cell viability is 82.1 % at 24 h",
+      "value": 82.1,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 5",
+        "quote": "hypoxia,1,24,82.1,2.74,12.6,0.19"
+      }
+    },
+    {
+      "id": "E5",
+      "kind": "number",
+      "claim": "hypoxia replicate 2 cell viability is 84.3 % at 24 h",
+      "value": 84.3,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 6",
+        "quote": "hypoxia,2,24,84.3,2.88,12.1,0.20"
+      }
+    },
+    {
+      "id": "E6",
+      "kind": "number",
+      "claim": "hypoxia replicate 3 cell viability is 83.0 % at 24 h",
+      "value": 83.0,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 7",
+        "quote": "hypoxia,3,24,83.0,2.81,12.4,0.19"
+      }
+    },
+    {
+      "id": "E7",
+      "kind": "number",
+      "claim": "hypoxia+siHIF1A replicate 1 cell viability is 91.2 % at 24 h",
+      "value": 91.2,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 8",
+        "quote": "hypoxia+siHIF1A,1,24,91.2,1.15,15.8,0.28"
+      }
+    },
+    {
+      "id": "E8",
+      "kind": "number",
+      "claim": "hypoxia+siHIF1A replicate 2 cell viability is 90.4 % at 24 h",
+      "value": 90.4,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 9",
+        "quote": "hypoxia+siHIF1A,2,24,90.4,1.09,16.2,0.29"
+      }
+    },
+    {
+      "id": "E9",
+      "kind": "number",
+      "claim": "hypoxia+siHIF1A replicate 3 cell viability is 92.0 % at 24 h",
+      "value": 92.0,
+      "unit": "%",
+      "source": {
+        "file": "materials/experiment.csv",
+        "locator": "row 10",
+        "quote": "hypoxia+siHIF1A,3,24,92.0,1.21,15.5,0.30"
+      }
+    },
+    {
+      "id": "E10",
+      "kind": "number",
+      "claim": "control mitoSOX signal is 1.02 fold at 0 h",
+      "value": 1.02,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 2",
+        "quote": "control,0,3,1.02"
+      }
+    },
+    {
+      "id": "E11",
+      "kind": "number",
+      "claim": "control mitoSOX signal is 1.05 fold at 6 h",
+      "value": 1.05,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 3",
+        "quote": "control,6,3,1.05"
+      }
+    },
+    {
+      "id": "E12",
+      "kind": "number",
+      "claim": "control mitoSOX signal is 0.98 fold at 12 h",
+      "value": 0.98,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 4",
+        "quote": "control,12,3,0.98"
+      }
+    },
+    {
+      "id": "E13",
+      "kind": "number",
+      "claim": "control mitoSOX signal is 1.01 fold at 24 h",
+      "value": 1.01,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 5",
+        "quote": "control,24,3,1.01"
+      }
+    },
+    {
+      "id": "E14",
+      "kind": "number",
+      "claim": "hypoxia mitoSOX signal is 1.18 fold at 0 h",
+      "value": 1.18,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 6",
+        "quote": "hypoxia,0,3,1.18"
+      }
+    },
+    {
+      "id": "E15",
+      "kind": "number",
+      "claim": "hypoxia mitoSOX signal is 2.08 fold at 6 h",
+      "value": 2.08,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 7",
+        "quote": "hypoxia,6,3,2.08"
+      }
+    },
+    {
+      "id": "E16",
+      "kind": "number",
+      "claim": "hypoxia mitoSOX signal is 2.61 fold at 12 h",
+      "value": 2.61,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 8",
+        "quote": "hypoxia,12,3,2.61"
+      }
+    },
+    {
+      "id": "E17",
+      "kind": "number",
+      "claim": "hypoxia mitoSOX signal is 2.81 fold at 24 h",
+      "value": 2.81,
+      "unit": "fold",
+      "source": {
+        "file": "materials/timecourse.csv",
+        "locator": "row 9",
+        "quote": "hypoxia,24,3,2.81"
+      }
+    },
+    {
+      "id": "E18",
+      "kind": "condition",
+      "claim": "the three conditions shown",
+      "source": {
+        "file": "materials/methods.md",
+        "locator": "L5",
+        "quote": "H9c2 cardiomyoblasts were exposed for 24 h to normoxia (control), 1% O2 (hypoxia), or 1% O2 after HIF-1A knockdown (hypoxia+siHIF1A)."
+      }
+    },
+    {
+      "id": "E19",
+      "kind": "sample size",
+      "claim": "three biological replicates per condition",
+      "source": {
+        "file": "materials/methods.md",
+        "locator": "L6",
+        "quote": "Cell viability was measured at 24 h with three biological replicates per condition."
+      }
+    },
+    {
+      "id": "E20",
+      "kind": "error bar meaning",
+      "claim": "one standard deviation (SD) around the mean",
+      "source": {
+        "file": "materials/methods.md",
+        "locator": "L7",
+        "quote": "Each bar in the example figure is the mean of the three replicates; the error bars are one standard deviation (SD) around that mean."
+      }
+    },
+    {
+      "id": "E21",
+      "kind": "reported comparison",
+      "claim": "hypoxia differs from the control, no p-value stated",
+      "source": {
+        "file": "materials/methods.md",
+        "locator": "L9",
+        "quote": "The source release reports that viability in hypoxia differs from the control; it does not state a p-value for that comparison."
+      }
+    },
+    {
+      "id": "E22",
+      "kind": "unit",
+      "claim": "viability in percent, ROS as fold change, time in hours",
+      "source": {
+        "file": "materials/methods.md",
+        "locator": "L12",
+        "quote": "Units: viability in percent (%), mitochondrial ROS as fold change, time in hours (h)."
+      }
+    }
+  ],
+  "panels": [
+    {
+      "id": "P1",
+      "role": "results",
+      "title": "Cell viability after 24 h",
+      "charts": [
+        {
+          "id": "C1",
+          "type": "bar",
+          "title": "",
+          "xlabel": "condition",
+          "ylabel": "cell viability",
+          "unit": "%",
+          "categories": [
+            "control",
+            "hypoxia",
+            "hypoxia+siHIF1A"
+          ],
+          "baseline": 0,
+          "axis": {
+            "y": {
+              "label": "cell viability",
+              "unit": "%",
+              "scale": "linear",
+              "tick_start": 0,
+              "tick_end": 100,
+              "tick_step": 20
+            }
+          },
+          "series": [
+            {
+              "name": "control",
+              "column": "cell_viability_pct",
+              "values": [
+                99.1
+              ],
+              "errors": [
+                0.6557
+              ],
+              "error_kind": "sd",
+              "n": 3,
+              "derived": true,
+              "source_values": [
+                99.2,
+                98.4,
+                99.7
+              ],
+              "sources": [
+                "E1",
+                "E2",
+                "E3"
+              ]
+            },
+            {
+              "name": "hypoxia",
+              "column": "cell_viability_pct",
+              "values": [
+                83.1333
+              ],
+              "errors": [
+                1.106
+              ],
+              "error_kind": "sd",
+              "n": 3,
+              "derived": true,
+              "source_values": [
+                82.1,
+                84.3,
+                83.0
+              ],
+              "sources": [
+                "E4",
+                "E5",
+                "E6"
+              ]
+            },
+            {
+              "name": "hypoxia+siHIF1A",
+              "column": "cell_viability_pct",
+              "values": [
+                91.2
+              ],
+              "errors": [
+                0.8
+              ],
+              "error_kind": "sd",
+              "n": 3,
+              "derived": true,
+              "source_values": [
+                91.2,
+                90.4,
+                92.0
+              ],
+              "sources": [
+                "E7",
+                "E8",
+                "E9"
+              ]
+            }
+          ],
+          "significance": [
+            {
+              "between": [
+                "control",
+                "hypoxia"
+              ],
+              "label": "differs",
+              "defined_in_caption": true
+            }
+          ]
+        }
+      ],
+      "legend": {
+        "title": "condition",
+        "items": [
+          {
+            "label": "control"
+          },
+          {
+            "label": "hypoxia"
+          },
+          {
+            "label": "hypoxia+siHIF1A"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P2",
+      "role": "results",
+      "title": "Mitochondrial ROS time course",
+      "charts": [
+        {
+          "id": "C2",
+          "type": "line",
+          "xlabel": "time",
+          "ylabel": "mitoSOX signal",
+          "unit": "fold",
+          "x_unit": "h",
+          "x": {
+            "label": "time (h)",
+            "values": [
+              0.0,
+              6.0,
+              12.0,
+              24.0
+            ]
+          },
+          "axis": {
+            "x": {
+              "label": "time",
+              "unit": "h",
+              "scale": "linear",
+              "tick_start": 0,
+              "tick_end": 24,
+              "tick_step": 6
+            },
+            "y": {
+              "label": "mitoSOX signal",
+              "unit": "fold",
+              "scale": "linear",
+              "tick_start": 0,
+              "tick_end": 3,
+              "tick_step": 1
+            }
+          },
+          "series": [
+            {
+              "name": "control",
+              "column": "mito_ros_fold",
+              "x": [
+                0.0,
+                6.0,
+                12.0,
+                24.0
+              ],
+              "values": [
+                1.02,
+                1.05,
+                0.98,
+                1.01
+              ],
+              "n": 3,
+              "sources": [
+                "E10",
+                "E11",
+                "E12",
+                "E13"
+              ]
+            },
+            {
+              "name": "hypoxia",
+              "column": "mito_ros_fold",
+              "x": [
+                0.0,
+                6.0,
+                12.0,
+                24.0
+              ],
+              "values": [
+                1.18,
+                2.08,
+                2.61,
+                2.81
+              ],
+              "n": 3,
+              "sources": [
+                "E14",
+                "E15",
+                "E16",
+                "E17"
+              ]
+            }
+          ]
+        }
+      ],
+      "legend": {
+        "title": "condition",
+        "items": [
+          {
+            "label": "control"
+          },
+          {
+            "label": "hypoxia"
+          }
+        ]
+      }
+    }
+  ],
+  "uncertainty": [],
+  "limitations": [],
+  "change_records": []
+}

@@ -1,0 +1,38 @@
+{
+  "case_id": "SYNTHETIC-CHART-001",
+  "task": "Read materials/experiment.csv and materials/timecourse.csv with materials/methods.md, then build the data figure for this work order: a grouped bar chart of cell viability per condition (bars are the group MEAN, error bars are ONE STANDARD DEVIATION, the sample size n must be shown, the y axis must carry the unit) and a line chart of the mitochondrial-ROS time course with the time axis in hours. Mark the comparison the source note reports. Deliver an editable layered SVG source, real PNG and PDF exports, a mark<->source data map (mark_data_map.json), a source map and result.json.",
+  "note": "SYNTHETIC EXAMPLE - NOT AN OFFICIAL CASE. Invented material used only to demonstrate the Skill interface and to self-test the pipeline. The numbers are fabricated for this fixture and must never be presented as real measurements.",
+  "output_contract": {
+    "case_id": "",
+    "figure_svg": "",
+    "figure_png": "",
+    "figure_pdf": "",
+    "figure_spec": "",
+    "mark_data_map": "",
+    "source_map": "",
+    "reviewer_notes": "",
+    "uncertainty": [],
+    "status": ""
+  },
+  "required_fields": [
+    "case_id",
+    "figure_svg",
+    "figure_png",
+    "figure_pdf",
+    "figure_spec",
+    "mark_data_map",
+    "source_map"
+  ],
+  "materials": [
+    "materials/experiment.csv",
+    "materials/timecourse.csv",
+    "materials/methods.md"
+  ],
+  "figure": {
+    "id": "figure03",
+    "kind": "chart",
+    "canvas": {"width_mm": 120, "height_mm": 90, "background": "#FFFFFF"},
+    "stale_caption": "Figure 3. Cell viability (kg) in two conditions. Bars show the median with 95% confidence intervals."
+  },
+  "notes": "figure.stale_caption is a STALE caption from an earlier draft: it names the wrong unit (kg), the wrong statistic (median) and the wrong number of conditions (two). It is metadata, NOT source data. The authoritative statements are materials/methods.md and the two tables. 'reviewer_notes' in output_contract is deliberately an unrecognised key: result.json must fill it with an honest run summary and disclose it in audit.unmapped_contract_keys rather than leaving it empty."
+}

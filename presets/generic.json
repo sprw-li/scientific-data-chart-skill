@@ -1,0 +1,25 @@
+{
+  "id": "generic",
+  "name": "Generic (journal-agnostic)",
+  "default_columns": 1,
+  "canvas_mm": {"single": 180.0, "double": 180.0, "height": 120.0},
+  "dpi": 300,
+  "font_sizes_pt": {"body": 8.0, "label": 7.0, "panel_title": 9.5, "main_title": 13.0, "legend": 7.0},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "palette_id": "okabe-ito",
+  "margins_mm": {"left": 12.0, "right": 3.0, "top": 4.0, "bottom": 9.0},
+  "panel_label_style": {"case": "lower", "weight": "bold", "position": "top-left", "size_pt": 9.0},
+  "font_family_stack": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+  "cjk_fallback_stack": ["Microsoft YaHei", "SimHei", "Noto Sans SC", "sans-serif"],
+  "tick_style": {"direction": "out", "length_mm": 1.0, "label_size_pt": 7.0},
+  "notes": "No journal is named by the case: the safe default. The canvas matches scene.DEFAULT_CANVAS (180x120 mm) so a spec without an explicit canvas is unchanged by choosing this preset.",
+  "source": "convention - no publisher guideline. Values are the layout engine's working defaults; only the palette (Okabe-Ito, a published CVD-safe scheme) has an outside source.",
+  "param_source": {
+    "canvas_mm": {"kind": "convention", "detail": "matches scene.DEFAULT_CANVAS 180x120 mm"},
+    "dpi": {"kind": "convention", "detail": "300 dpi working default"},
+    "font_sizes_pt": {"kind": "convention", "detail": "layout BASE_SIZES working values"},
+    "line_widths_pt": {"kind": "convention", "detail": "layout working values"},
+    "margins_mm": {"kind": "convention", "detail": "working margins"},
+    "palette_id": {"kind": "guideline", "detail": "Okabe & Ito 2002 colour-universal design palette"}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "nature-single",
+  "name": "Nature (single column)",
+  "default_columns": 1,
+  "canvas_mm": {"single": 89.0, "double": 183.0, "height": 80.0},
+  "dpi": 300,
+  "font_sizes_pt": {"body": 7.0, "label": 7.0, "panel_title": 8.0, "main_title": 11.0, "legend": 6.0},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "palette_id": "okabe-ito",
+  "margins_mm": {"left": 11.0, "right": 3.0, "top": 3.0, "bottom": 8.0},
+  "panel_label_style": {"case": "lower", "weight": "bold", "position": "top-left", "size_pt": 8.0},
+  "font_family_stack": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+  "cjk_fallback_stack": ["Microsoft YaHei", "SimHei", "Noto Sans SC", "Source Han Sans SC", "sans-serif"],
+  "tick_style": {"direction": "out", "length_mm": 1.0, "label_size_pt": 7.0},
+  "notes": "Single-column Nature artwork. Canvas height is a working default (figures vary); pass meta.canvas.h_mm to override. Type is clamped to the contract floors, so main_title 9 pt in a journal guideline would still print at 11 pt.",
+  "source": "Nature author guidelines, 'Figures' (https://www.nature.com/nature/for-authors/final-submission): single column 89 mm, double column 183 mm, minimum 5 pt type, line weights >= 0.25 pt. Column widths are from the guideline; the exact pt/margins/height values used here are working values (see param_source).",
+  "param_source": {
+    "canvas_mm.single": {"kind": "guideline", "detail": "89 mm single-column width (Nature figures guidelines)"},
+    "canvas_mm.double": {"kind": "guideline", "detail": "183 mm double-column width (Nature figures guidelines)"},
+    "canvas_mm.height": {"kind": "convention", "detail": "working default; every figure overrides it"},
+    "dpi": {"kind": "guideline", "detail": "Nature asks for >=300 dpi raster artwork"},
+    "font_sizes_pt": {"kind": "convention", "detail": "rounded working sizes inside Nature's 5-7 pt body range; panel_title/main_title raised to the contract floors"},
+    "line_widths_pt": {"kind": "convention", "detail": "working values, all above Nature's 0.25 pt minimum"},
+    "margins_mm": {"kind": "convention", "detail": "working margins; left margin sized for a 3-digit tick label"},
+    "palette_id": {"kind": "convention", "detail": "Okabe-Ito colour-vision-deficiency-safe palette"}
+  }
+}

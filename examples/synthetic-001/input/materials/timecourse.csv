@@ -1,0 +1,9 @@
+condition,time_h,n,mito_ros_fold
+control,0,3,1.02
+control,6,3,1.05
+control,12,3,0.98
+control,24,3,1.01
+hypoxia,0,3,1.18
+hypoxia,6,3,2.08
+hypoxia,12,3,2.61
+hypoxia,24,3,2.81

@@ -1,0 +1,27 @@
+{
+  "id": "cell",
+  "name": "Cell Press",
+  "default_columns": 1,
+  "canvas_mm": {"single": 85.0, "double": 174.0, "height": 80.0},
+  "dpi": 300,
+  "font_sizes_pt": {"body": 7.0, "label": 7.0, "panel_title": 8.0, "main_title": 11.0, "legend": 6.0},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "palette_id": "okabe-ito",
+  "margins_mm": {"left": 11.0, "right": 3.0, "top": 3.0, "bottom": 8.0},
+  "panel_label_style": {"case": "upper", "weight": "bold", "position": "top-left", "size_pt": 8.0},
+  "font_family_stack": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+  "cjk_fallback_stack": ["Microsoft YaHei", "SimHei", "Noto Sans SC", "sans-serif"],
+  "tick_style": {"direction": "out", "length_mm": 1.0, "label_size_pt": 7.0},
+  "notes": "Cell Press figures are normally submitted in the final column width; the double-column width (174 mm) is provided for multi-panel figures.",
+  "source": "Cell Press figure guidelines (https://www.cell.com/figure-guidelines): single column 85 mm, double column 174 mm; sans-serif (Arial/Helvetica) labels, minimum 6 pt type. Column widths from the guideline; pt/margins/height are working values (see param_source).",
+  "param_source": {
+    "canvas_mm.single": {"kind": "guideline", "detail": "85 mm single-column width"},
+    "canvas_mm.double": {"kind": "guideline", "detail": "174 mm double-column width"},
+    "canvas_mm.height": {"kind": "convention", "detail": "working default; overridable"},
+    "dpi": {"kind": "guideline", "detail": ">=300 dpi raster artwork"},
+    "font_sizes_pt": {"kind": "convention", "detail": "working sizes above the 6 pt minimum, clamped to contract floors"},
+    "line_widths_pt": {"kind": "convention", "detail": "working values"},
+    "margins_mm": {"kind": "convention", "detail": "working margins"},
+    "palette_id": {"kind": "convention", "detail": "Okabe-Ito CVD-safe palette"}
+  }
+}
