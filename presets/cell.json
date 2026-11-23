@@ -5,7 +5,7 @@
   "canvas_mm": {"single": 85.0, "double": 174.0, "height": 80.0},
   "dpi": 300,
   "font_sizes_pt": {"body": 7.0, "label": 7.0, "panel_title": 8.0, "main_title": 11.0, "legend": 6.0},
-  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.5},
+  "line_widths_pt": {"axis": 0.5, "data": 1.0, "error": 0.75, "frame": 0.6},
   "palette_id": "okabe-ito",
   "margins_mm": {"left": 11.0, "right": 3.0, "top": 3.0, "bottom": 8.0},
   "panel_label_style": {"case": "upper", "weight": "bold", "position": "top-left", "size_pt": 8.0},
