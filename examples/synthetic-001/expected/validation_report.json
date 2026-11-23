@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "id": "A",
+      "name": "canvas/margins",
+      "status": "pass",
+      "detail": "page 120.00x90.00 mm margin 3.00 mm, primitives=111 (no bbox: 0, 1 page-sized frame exempt): violations=0, worst margin=-3.000 mm"
+    },
+    {
+      "id": "B",
+      "name": "typography",
+      "status": "pass",
+      "detail": "text_nodes=45, min_body=7.00pt(>=7.0), min_panel_title=9.50pt(>=8.0), min_main_title=13.00pt(>=11.0), below_floor=0, overflow_events=0, truncated_labels=0, unknown_size=0, glyph_missing=0(items), widths=measure"
+    },
+    {
+      "id": "C",
+      "name": "color-accessibility",
+      "status": "pass",
+      "detail": "palette_normal_min_dE=26.43, palette_protan_min_dE=20.71, palette_deutan_min_dE=17.92, palette_tritan_min_dE=9.79, categorical_groups=4, worst_CVD_min_dE=19.49(tritan/P1.chart[C1] #0072B2 vs #009E73, floor 6.0), worst_gray_min_dL*=11.77(P1.chart[C1] #0072B2 vs #009E73, floor 5.0), text_bg_pairs=45(backgrounds 7: bg6d3657b0:2,ch314768f6:14,ch8a06f5ec:16,lg00945b69:3), worst_contrast=8.47:1(pn11380830 fg=#444444 on bg=#EFEFEF[pn53a81d39] need>=4.5), contrast_below=0"
+    },
+    {
+      "id": "D",
+      "name": "encoding-fidelity",
+      "status": "pass",
+      "detail": "legends_checked=2, legend_series_colour_pairs=0, colorbars_checked=0, spec_edges=0{}, scene_arrows=0{}, edge_direction_checked=0, units_missing=0, problems=0 | P1.legend[0] 3 items == series union == chart C1 series (multiset); P2.legend[0] 2 items == series union == chart C2 series (multiset)"
+    },
+    {
+      "id": "E",
+      "name": "provenance",
+      "status": "pass",
+      "detail": "source_checks=evidence.check_provenance, materials=5, refs=17, dangling=0, evidence_items=22, quotes_resolved=22, quotes_unresolved=0, module_issues=0(err=0,warn=0)"
+    },
+    {
+      "id": "F",
+      "name": "editability",
+      "status": "pass",
+      "detail": "svg_bytes=48817, text_nodes=51, groups=5(named=5,unnamed=0), ids=119(unique=119,dup=0), images=0(full_page=0), required_labels=29, labels_present=29(contiguous=29,token-covered=0), labels_missing=0, advisory_labels=0(present=0), rule={contiguous substring OR all label tokens present in that panel's text nodes}, roundtrip={patched 1 label('a', 1 chars), applied=1 changed=True parses=True structure=True ids_preserved=True}"
+    },
+    {
+      "id": "G",
+      "name": "determinism",
+      "status": "pass",
+      "detail": "re-exported 3 artefact(s) to .determinism_check; identical=True; figure.pdf run1=4010ef82afebb808 run2=4010ef82afebb808; figure.png run1=c6308839b5a26400 run2=c6308839b5a26400; figure.svg run1=cd3eb7c6dc9fbf59 run2=cd3eb7c6dc9fbf59; export_report_claims_identical=True"
+    },
+    {
+      "id": "H",
+      "name": "export-quality",
+      "status": "pass",
+      "detail": "page_mm=[120.0, 90.0](requested [120.0, 90.0] by case.json(material:case.json).figure.canvas, off 0.00 mm; spec.meta.canvas [120.0, 90.0], off 0.00 mm), png_px=[1417, 1063](expected [1417, 1063]), png_dpi_meta=300.0248(need>=300), png_pHYs=True, pdf_pages=1(need 1), pdf_mediabox=[340.1575, 255.1181](expected [340.157, 255.118])pt, pdf_font_programs=2 embedded=True, pdf_text_ops=69 vector=True, pdf_image_objects=0, report_cross_checked=px,dpi,pages,fonts,vector,page_mm"
+    },
+    {
+      "id": "I",
+      "name": "contract",
+      "status": "pass",
+      "detail": "result_keys=21, case_id='SYNTHETIC-CHART-001', contract_keys=9, hard_empty=0, soft_empty=0, artifacts=8, sha_checked=8, self_written_skipped=0, missing_files=0, sha_mismatch=0, bytes_mismatch=0, checks_map=0, maps_on_disk=2(mark_data_map.json,source_map.json), maps_in_artifacts=2(mark_data_map.json,source_map.json)"
+    },
+    {
+      "id": "J",
+      "name": "mark-data-map",
+      "status": "pass",
+      "detail": "map=mark_data_map.json(quote verbatim in materials/methods.md), schema_version='1.0', marks=15, numeric_marks=14, derived_marks=6, typological_marks=1(located=1), marks_with_source=15, cells_index=17, materials=5(text=True), tables=2, plotted_values_expected=11, scene_declared_marks=15, label_checked=6, source_missing=0, cell_unresolved=0, value_mismatch=0, label_not_verbatim=0, derived_without_source_values=0, reverse_index_missing=0, reverse_unknown=0, dup_ids=0, coverage_missing=0, unmapped=0, ambiguous=0"
+    },
+    {
+      "id": "K",
+      "name": "annotation-completeness",
+      "status": "warn",
+      "detail": "charts=2, series=5, errbar_series=3, significance_entries=1, sig_defined_in_caption=1, bar_like=1, unit_violations=0, axis_range_warns=0, repeated_tables=0, n_column_tables=2, series_with_n=5, caption_declares_n=True, stale_caption=True, warnings=1, violations=0 | W922 caption/system unit clash: stale_caption names ['kg'], chart units are ['%', 'fold']"
+    },
+    {
+      "id": "L",
+      "name": "typesetting-i18n",
+      "status": "pass",
+      "detail": "cjk_chars=0(unique), cjk_text_nodes=0, text_nodes=45, measured=45, font_faces=3(arial.ttf,arialbd.ttf,simhei.ttf), coverage=ok, missing_glyphs=-, degraded_declared=False, long_label_overflow=0"
+    }
+  ],
+  "failed": [],
+  "warned": [
+    "K"
+  ]
+}
