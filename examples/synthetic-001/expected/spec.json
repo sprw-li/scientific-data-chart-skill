@@ -131,97 +131,97 @@
     {
       "id": "E10",
       "kind": "number",
-      "claim": "control mitoSOX signal is 1.02 fold at 0 h",
-      "value": 1.02,
+      "claim": "control mitoSOX signal is 1.03 fold at 0 h",
+      "value": 1.03,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 2",
-        "quote": "control,0,3,1.02"
+        "quote": "control,0,3,1.03"
       }
     },
     {
       "id": "E11",
       "kind": "number",
-      "claim": "control mitoSOX signal is 1.05 fold at 6 h",
-      "value": 1.05,
+      "claim": "control mitoSOX signal is 1.06 fold at 6 h",
+      "value": 1.06,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 3",
-        "quote": "control,6,3,1.05"
+        "quote": "control,6,3,1.06"
       }
     },
     {
       "id": "E12",
       "kind": "number",
-      "claim": "control mitoSOX signal is 0.98 fold at 12 h",
-      "value": 0.98,
+      "claim": "control mitoSOX signal is 0.99 fold at 12 h",
+      "value": 0.99,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 4",
-        "quote": "control,12,3,0.98"
+        "quote": "control,12,3,0.99"
       }
     },
     {
       "id": "E13",
       "kind": "number",
-      "claim": "control mitoSOX signal is 1.01 fold at 24 h",
-      "value": 1.01,
+      "claim": "control mitoSOX signal is 1.04 fold at 24 h",
+      "value": 1.04,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 5",
-        "quote": "control,24,3,1.01"
+        "quote": "control,24,3,1.04"
       }
     },
     {
       "id": "E14",
       "kind": "number",
-      "claim": "hypoxia mitoSOX signal is 1.18 fold at 0 h",
-      "value": 1.18,
+      "claim": "hypoxia mitoSOX signal is 1.19 fold at 0 h",
+      "value": 1.19,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 6",
-        "quote": "hypoxia,0,3,1.18"
+        "quote": "hypoxia,0,3,1.19"
       }
     },
     {
       "id": "E15",
       "kind": "number",
-      "claim": "hypoxia mitoSOX signal is 2.08 fold at 6 h",
-      "value": 2.08,
+      "claim": "hypoxia mitoSOX signal is 2.07 fold at 6 h",
+      "value": 2.07,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 7",
-        "quote": "hypoxia,6,3,2.08"
+        "quote": "hypoxia,6,3,2.07"
       }
     },
     {
       "id": "E16",
       "kind": "number",
-      "claim": "hypoxia mitoSOX signal is 2.61 fold at 12 h",
-      "value": 2.61,
+      "claim": "hypoxia mitoSOX signal is 2.62 fold at 12 h",
+      "value": 2.62,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 8",
-        "quote": "hypoxia,12,3,2.61"
+        "quote": "hypoxia,12,3,2.62"
       }
     },
     {
       "id": "E17",
       "kind": "number",
-      "claim": "hypoxia mitoSOX signal is 2.81 fold at 24 h",
-      "value": 2.81,
+      "claim": "hypoxia mitoSOX signal is 2.83 fold at 24 h",
+      "value": 2.83,
       "unit": "fold",
       "source": {
         "file": "materials/timecourse.csv",
         "locator": "row 9",
-        "quote": "hypoxia,24,3,2.81"
+        "quote": "hypoxia,24,3,2.83"
       }
     },
     {
@@ -288,11 +288,6 @@
           "xlabel": "condition",
           "ylabel": "cell viability",
           "unit": "%",
-          "categories": [
-            "control",
-            "hypoxia",
-            "hypoxia+siHIF1A"
-          ],
           "baseline": 0,
           "axis": {
             "y": {
@@ -300,7 +295,7 @@
               "unit": "%",
               "scale": "linear",
               "tick_start": 0,
-              "tick_end": 100,
+              "tick_end": 120,
               "tick_step": 20
             }
           },
@@ -312,10 +307,11 @@
                 99.1
               ],
               "errors": [
-                0.6557
+                0.65574385243
               ],
               "error_kind": "sd",
               "n": 3,
+              "color": "#0072B2",
               "derived": true,
               "source_values": [
                 99.2,
@@ -332,13 +328,14 @@
               "name": "hypoxia",
               "column": "cell_viability_pct",
               "values": [
-                83.1333
+                83.133333333333
               ],
               "errors": [
-                1.106
+                1.106044001536
               ],
               "error_kind": "sd",
               "n": 3,
+              "color": "#E69F00",
               "derived": true,
               "source_values": [
                 82.1,
@@ -362,6 +359,7 @@
               ],
               "error_kind": "sd",
               "n": 3,
+              "color": "#009E73",
               "derived": true,
               "source_values": [
                 91.2,
@@ -452,12 +450,13 @@
                 24.0
               ],
               "values": [
-                1.02,
-                1.05,
-                0.98,
-                1.01
+                1.03,
+                1.06,
+                0.99,
+                1.04
               ],
               "n": 3,
+              "color": "#0072B2",
               "sources": [
                 "E10",
                 "E11",
@@ -475,12 +474,13 @@
                 24.0
               ],
               "values": [
-                1.18,
-                2.08,
-                2.61,
-                2.81
+                1.19,
+                2.07,
+                2.62,
+                2.83
               ],
               "n": 3,
+              "color": "#E69F00",
               "sources": [
                 "E14",
                 "E15",
