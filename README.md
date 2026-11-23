@@ -111,7 +111,7 @@ artefacts but not quality; an authored spec is what the rubric rewards.
 | `result` | `--out DIR [--input DIR] [--work DIR] [--status ok\|partial\|needs_human]` | `result.json` |
 | `edit` | `--spec SPEC --edits EDITS.json --out SPEC2` | edited spec (−`spec-issues.json` on error) |
 | `run` | `--input DIR --work DIR --out DIR [--formats …] [--preset ID]` | the whole chain; returns the `check` exit code |
-| `locate` | `--out DIR (--mark ID \| --cell CELL \| --file F --row N --col C)` | mark↔source JSON; exit `0` hit / `2` usage / **`5` miss** |
+| `locate` | `--out DIR (--mark ID \| --cell CELL \| --file F --row N --col C)` | mark↔source JSON; exit `0` hit / `2` usage / **`5` miss**. All three query forms are accepted (the `--file/--row/--col` form resolves the table name from the map) |
 | `presets` | `--list` | the preset ids and their parameters; exit `0` |
 | `selftest` | `[--quick]` | full-chain self-test incl. injected-defect negatives; exit `0`/`1` |
 
@@ -156,10 +156,13 @@ Optional and only when a backend exists: `preview/figure.png`, `figure.pptx`, `f
 ### `result.json`
 
 `case_id`, `status` (`ok`/`partial`/`needs_human`), `artifacts{path,bytes,sha256}`, `sources`,
-`evidence`, `change_records`, `uncertainty`, `limitations`, `preset`, `checks`, `mark_data_map`,
-`source_map`, `audit{unfilled_fields,unmapped_contract_keys,determinism,font}`, `runtime`, plus
-every `output_contract` key. **A single failed gate forbids `status: "ok"`**; a structural gap
-(no material / unverifiable) forces `partial`.
+`evidence`, `change_records`, `uncertainty`, `limitations`, `preset`, `mark_data_map`,
+`source_map`, `audit{unfilled_fields,unmapped_contract_keys,checks_ok,checks_failed,checks_warned,
+determinism,font}`, `runtime`, `contract_values{…}`, plus every `output_contract` key (recognised
+ones mapped onto the real product, unrecognised ones filled with a truthful run summary and listed
+in `audit.unmapped_contract_keys`). Gate verdicts are also available as a `checks{gate: status}`
+map (CONTRACT §2.3) and in full in `validation_report.json`. **A single failed gate forbids
+`status: "ok"`**; a structural gap (no material / unverifiable) forces `partial`.
 
 ## 6. Canvas, DPI, colour, fonts
 
@@ -194,7 +197,7 @@ See [`references/presets.md`](references/presets.md).
 |---|---|---|
 | `check` fails with a gate id | `1` | Read `validation_report.json`; the `detail` carries measured numbers. Fix the spec, rebuild+re-result. |
 | `E910` (gate J) | `1` | A drawn value is not in the data. Bind it to the real column, or mark it `derived` with exact `source_values` (tolerance `1e-9`). |
-| `E911`–`E915` (gate K) | `1` | Add `error_kind` / `test`+`p` / `n` / axis `unit` / `baseline: 0` respectively. |
+| `E911`–`E915` (gate K) | `1` | Add `error_kind` / a test name or `defined_in_caption` / `n` / axis `unit` / `baseline: 0` respectively. |
 | `E916` unknown preset | `4` | `chart.py presets --list`, then use one of the shipped ids. |
 | `E917` CJK glyph | `1` | Use a font containing the glyph, or state the limitation and ship `partial`. |
 | `result.json missing` in gate I | `1` | You ran `check` before `result`. Re-run in the order above. |
