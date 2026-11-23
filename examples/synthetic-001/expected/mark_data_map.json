@@ -1,0 +1,650 @@
+{
+  "schema_version": "1.0",
+  "case_id": "SYNTHETIC-CHART-001",
+  "marks_source": "scene-marks",
+  "materials": [
+    {
+      "file": "materials/experiment.csv",
+      "sha256": "84ed5fa5b28f4551bbf40ed1d628fbc57add96d93c68757952d42efee8ec9435",
+      "format": "csv",
+      "tables": [
+        {
+          "name": "experiment",
+          "header_row": 1,
+          "n_rows": 9,
+          "columns": [
+            "condition",
+            "replicate",
+            "time_h",
+            "cell_viability_pct",
+            "mito_ros_fold",
+            "atp_nmol_per_mg",
+            "pdh_activity_per_s"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "materials/timecourse.csv",
+      "sha256": "601ef21baa88f39602393f0459f7fe18ab80774a42f17cf9e538b9bcfe0df30c",
+      "format": "csv",
+      "tables": [
+        {
+          "name": "timecourse",
+          "header_row": 1,
+          "n_rows": 8,
+          "columns": [
+            "condition",
+            "time_h",
+            "n",
+            "mito_ros_fold"
+          ]
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "mark_id": "C1#series:0#bar:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "control",
+      "category": "control",
+      "value": 99.1,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 2,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:2:cell_viability_pct",
+        "row_label": null,
+        "quote": "99.2",
+        "row_span": [
+          95,
+          127
+        ]
+      },
+      "derived": true,
+      "aggregate": "mean",
+      "stat": "mean",
+      "source_values": [
+        {
+          "value": 99.2,
+          "cell": "materials/experiment.csv#experiment:2:cell_viability_pct",
+          "row": 2,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 98.4,
+          "cell": "materials/experiment.csv#experiment:3:cell_viability_pct",
+          "row": 3,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 99.7,
+          "cell": "materials/experiment.csv#experiment:4:cell_viability_pct",
+          "row": 4,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "mean",
+        "n": 3,
+        "recomputed": 99.10000000000001,
+        "delta": 1.4210854715202004e-14,
+        "tolerance": 9.91e-05,
+        "matches": true
+      },
+      "n": 3
+    },
+    {
+      "mark_id": "C1#series:1#bar:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "hypoxia",
+      "category": "hypoxia",
+      "value": 83.133333333333,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 5,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:5:cell_viability_pct",
+        "row_label": null,
+        "quote": "82.1",
+        "row_span": [
+          194,
+          226
+        ]
+      },
+      "derived": true,
+      "aggregate": "mean",
+      "stat": "mean",
+      "source_values": [
+        {
+          "value": 82.1,
+          "cell": "materials/experiment.csv#experiment:5:cell_viability_pct",
+          "row": 5,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 84.3,
+          "cell": "materials/experiment.csv#experiment:6:cell_viability_pct",
+          "row": 6,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 83.0,
+          "cell": "materials/experiment.csv#experiment:7:cell_viability_pct",
+          "row": 7,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "mean",
+        "n": 3,
+        "recomputed": 83.13333333333333,
+        "delta": 3.268496584496461e-13,
+        "tolerance": 8.3133333333333e-05,
+        "matches": true
+      },
+      "n": 3
+    },
+    {
+      "mark_id": "C1#series:2#bar:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "hypoxia+siHIF1A",
+      "category": "hypoxia+siHIF1A",
+      "value": 91.2,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 8,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:8:cell_viability_pct",
+        "row_label": null,
+        "quote": "91.2",
+        "row_span": [
+          293,
+          333
+        ]
+      },
+      "derived": true,
+      "aggregate": "mean",
+      "stat": "mean",
+      "source_values": [
+        {
+          "value": 91.2,
+          "cell": "materials/experiment.csv#experiment:8:cell_viability_pct",
+          "row": 8,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 90.4,
+          "cell": "materials/experiment.csv#experiment:9:cell_viability_pct",
+          "row": 9,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 92.0,
+          "cell": "materials/experiment.csv#experiment:10:cell_viability_pct",
+          "row": 10,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "mean",
+        "n": 3,
+        "recomputed": 91.2,
+        "delta": 0.0,
+        "tolerance": 9.12e-05,
+        "matches": true
+      },
+      "n": 3
+    },
+    {
+      "mark_id": "C1#series:0#eb:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "control",
+      "category": "control",
+      "value": 0.65574385243,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 2,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:2:cell_viability_pct",
+        "row_label": null,
+        "quote": "99.2",
+        "row_span": [
+          95,
+          127
+        ]
+      },
+      "derived": true,
+      "aggregate": "sd",
+      "stat": "sd",
+      "source_values": [
+        {
+          "value": 99.2,
+          "cell": "materials/experiment.csv#experiment:2:cell_viability_pct",
+          "row": 2,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 98.4,
+          "cell": "materials/experiment.csv#experiment:3:cell_viability_pct",
+          "row": 3,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 99.7,
+          "cell": "materials/experiment.csv#experiment:4:cell_viability_pct",
+          "row": 4,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "sd",
+        "n": 3,
+        "recomputed": 0.6557438524301985,
+        "delta": 1.98507876802978e-13,
+        "tolerance": 6.557438524299999e-07,
+        "matches": true
+      },
+      "n": 3,
+      "kind": "errorbar",
+      "error_kind": "sd"
+    },
+    {
+      "mark_id": "C1#series:1#eb:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "hypoxia",
+      "category": "hypoxia",
+      "value": 1.106044001536,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 5,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:5:cell_viability_pct",
+        "row_label": null,
+        "quote": "82.1",
+        "row_span": [
+          194,
+          226
+        ]
+      },
+      "derived": true,
+      "aggregate": "sd",
+      "stat": "sd",
+      "source_values": [
+        {
+          "value": 82.1,
+          "cell": "materials/experiment.csv#experiment:5:cell_viability_pct",
+          "row": 5,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 84.3,
+          "cell": "materials/experiment.csv#experiment:6:cell_viability_pct",
+          "row": 6,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 83.0,
+          "cell": "materials/experiment.csv#experiment:7:cell_viability_pct",
+          "row": 7,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "sd",
+        "n": 3,
+        "recomputed": 1.106044001535805,
+        "delta": 1.949551631241775e-13,
+        "tolerance": 1.106044001536e-06,
+        "matches": true
+      },
+      "n": 3,
+      "kind": "errorbar",
+      "error_kind": "sd"
+    },
+    {
+      "mark_id": "C1#series:2#eb:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "hypoxia+siHIF1A",
+      "category": "hypoxia+siHIF1A",
+      "value": 0.8,
+      "source": {
+        "file": "materials/experiment.csv",
+        "table": "experiment",
+        "row": 8,
+        "column": "cell_viability_pct",
+        "cell": "materials/experiment.csv#experiment:8:cell_viability_pct",
+        "row_label": null,
+        "quote": "91.2",
+        "row_span": [
+          293,
+          333
+        ]
+      },
+      "derived": true,
+      "aggregate": "sd",
+      "stat": "sd",
+      "source_values": [
+        {
+          "value": 91.2,
+          "cell": "materials/experiment.csv#experiment:8:cell_viability_pct",
+          "row": 8,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 90.4,
+          "cell": "materials/experiment.csv#experiment:9:cell_viability_pct",
+          "row": 9,
+          "column": "cell_viability_pct"
+        },
+        {
+          "value": 92.0,
+          "cell": "materials/experiment.csv#experiment:10:cell_viability_pct",
+          "row": 10,
+          "column": "cell_viability_pct"
+        }
+      ],
+      "aggregate_check": {
+        "kind": "sd",
+        "n": 3,
+        "recomputed": 0.7999999999999972,
+        "delta": 2.886579864025407e-15,
+        "tolerance": 8e-07,
+        "matches": true
+      },
+      "n": 3,
+      "kind": "errorbar",
+      "error_kind": "sd"
+    },
+    {
+      "mark_id": "C1#chart#sig:0",
+      "chart_id": "C1",
+      "panel_id": "P1",
+      "series": "control",
+      "category": null,
+      "value": null,
+      "source": {
+        "file": "materials/methods.md",
+        "table": null,
+        "row": null,
+        "column": null,
+        "cell": null,
+        "locator": "line 9",
+        "quote": "The source release reports that viability in hypoxia differs from the control; it does not state a p-value for that comparison.",
+        "source_basis": "evidence-span",
+        "matched_labels": [
+          "control",
+          "hypoxia",
+          "differs"
+        ]
+      },
+      "kind": "significance",
+      "mark_class": "annotation",
+      "significance": {
+        "between": [
+          "control",
+          "hypoxia"
+        ],
+        "label": "differs",
+        "test": null,
+        "p": null
+      },
+      "source_basis": "evidence-span"
+    },
+    {
+      "mark_id": "C2#series:0#pt:0",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "control",
+      "category": null,
+      "value": 1.03,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 2,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:2:mito_ros_fold",
+        "row_label": null,
+        "quote": "1.03",
+        "row_span": [
+          33,
+          49
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:0#pt:1",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "control",
+      "category": null,
+      "value": 1.06,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 3,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:3:mito_ros_fold",
+        "row_label": null,
+        "quote": "1.06",
+        "row_span": [
+          50,
+          66
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:0#pt:2",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "control",
+      "category": null,
+      "value": 0.99,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 4,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:4:mito_ros_fold",
+        "row_label": null,
+        "quote": "0.99",
+        "row_span": [
+          67,
+          84
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:0#pt:3",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "control",
+      "category": null,
+      "value": 1.04,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 5,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:5:mito_ros_fold",
+        "row_label": null,
+        "quote": "1.04",
+        "row_span": [
+          85,
+          102
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:1#pt:0",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "hypoxia",
+      "category": null,
+      "value": 1.19,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 6,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:6:mito_ros_fold",
+        "row_label": null,
+        "quote": "1.19",
+        "row_span": [
+          103,
+          119
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:1#pt:1",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "hypoxia",
+      "category": null,
+      "value": 2.07,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 7,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:7:mito_ros_fold",
+        "row_label": null,
+        "quote": "2.07",
+        "row_span": [
+          120,
+          136
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:1#pt:2",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "hypoxia",
+      "category": null,
+      "value": 2.62,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 8,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:8:mito_ros_fold",
+        "row_label": null,
+        "quote": "2.62",
+        "row_span": [
+          137,
+          154
+        ]
+      }
+    },
+    {
+      "mark_id": "C2#series:1#pt:3",
+      "chart_id": "C2",
+      "panel_id": "P2",
+      "series": "hypoxia",
+      "category": null,
+      "value": 2.83,
+      "source": {
+        "file": "materials/timecourse.csv",
+        "table": "timecourse",
+        "row": 9,
+        "column": "mito_ros_fold",
+        "cell": "materials/timecourse.csv#timecourse:9:mito_ros_fold",
+        "row_label": null,
+        "quote": "2.83",
+        "row_span": [
+          155,
+          172
+        ]
+      }
+    }
+  ],
+  "cells": {
+    "materials/experiment.csv#experiment:10:cell_viability_pct": [
+      "C1#series:2#bar:0",
+      "C1#series:2#eb:0"
+    ],
+    "materials/experiment.csv#experiment:2:cell_viability_pct": [
+      "C1#series:0#bar:0",
+      "C1#series:0#eb:0"
+    ],
+    "materials/experiment.csv#experiment:3:cell_viability_pct": [
+      "C1#series:0#bar:0",
+      "C1#series:0#eb:0"
+    ],
+    "materials/experiment.csv#experiment:4:cell_viability_pct": [
+      "C1#series:0#bar:0",
+      "C1#series:0#eb:0"
+    ],
+    "materials/experiment.csv#experiment:5:cell_viability_pct": [
+      "C1#series:1#bar:0",
+      "C1#series:1#eb:0"
+    ],
+    "materials/experiment.csv#experiment:6:cell_viability_pct": [
+      "C1#series:1#bar:0",
+      "C1#series:1#eb:0"
+    ],
+    "materials/experiment.csv#experiment:7:cell_viability_pct": [
+      "C1#series:1#bar:0",
+      "C1#series:1#eb:0"
+    ],
+    "materials/experiment.csv#experiment:8:cell_viability_pct": [
+      "C1#series:2#bar:0",
+      "C1#series:2#eb:0"
+    ],
+    "materials/experiment.csv#experiment:9:cell_viability_pct": [
+      "C1#series:2#bar:0",
+      "C1#series:2#eb:0"
+    ],
+    "materials/timecourse.csv#timecourse:2:mito_ros_fold": [
+      "C2#series:0#pt:0"
+    ],
+    "materials/timecourse.csv#timecourse:3:mito_ros_fold": [
+      "C2#series:0#pt:1"
+    ],
+    "materials/timecourse.csv#timecourse:4:mito_ros_fold": [
+      "C2#series:0#pt:2"
+    ],
+    "materials/timecourse.csv#timecourse:5:mito_ros_fold": [
+      "C2#series:0#pt:3"
+    ],
+    "materials/timecourse.csv#timecourse:6:mito_ros_fold": [
+      "C2#series:1#pt:0"
+    ],
+    "materials/timecourse.csv#timecourse:7:mito_ros_fold": [
+      "C2#series:1#pt:1"
+    ],
+    "materials/timecourse.csv#timecourse:8:mito_ros_fold": [
+      "C2#series:1#pt:2"
+    ],
+    "materials/timecourse.csv#timecourse:9:mito_ros_fold": [
+      "C2#series:1#pt:3"
+    ]
+  },
+  "unmapped": [],
+  "ambiguous": [],
+  "counts": {
+    "marks": 15,
+    "mapped": 15,
+    "derived": 6,
+    "unmapped": 0,
+    "ambiguous": 0,
+    "cells_indexed": 17,
+    "tables": 2,
+    "cells_scanned": 95,
+    "reverse_index_complete": true
+  }
+}
