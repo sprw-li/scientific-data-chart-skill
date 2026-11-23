@@ -81,7 +81,7 @@ Writes `/app/work/materials.json` (per-file text, `sha256`, locators),
 This is your job, and the only creative step. Full field reference:
 [`references/spec-schema.md`](references/spec-schema.md).
 
-```json
+```jsonc
 { "meta": {"case_id": "SYNTHETIC-CHART-001", "language": "en", "preset": "nature-single",
            "figure_id": "figure03", "canvas": {"w_mm":120, "h_mm":90, "dpi":300},
            "title": "...", "caption": "..."},
@@ -90,14 +90,14 @@ This is your job, and the only creative step. Full field reference:
                 "source":{"file":"materials/experiment.csv","locator":"row 5","quote":"..."}}],
   "panels": [{"id":"P1","role":"results","title":"...",
     "charts": [{"id":"C1","type":"bar","xlabel":"condition","ylabel":"cell viability","unit":"%",
-      "categories":["control","hypoxia"],
       "baseline": 0,
       "axis": {"y":{"label":"cell viability","unit":"%","scale":"linear",
                     "tick_start":0,"tick_end":100,"tick_step":20}},
-      "series": [{"name":"control","column":"cell_viability_pct","values":[99.5],
-                  "errors":[0.5],"error_kind":"sd","n":3,
-                  "color":"#0072B2","source":"E1","derived":true,"source_values":[99.2,98.4,99.7]}],
-      "significance": [{"between":["control","hypoxia"],"label":"**","test":"Welch t-test","p":0.003}]}]}],
+      "series": [{"name":"control","column":"cell_viability_pct","values":[99.1],
+                  "errors":[0.65574385243],"error_kind":"sd","n":3,
+                  "color":"#0072B2","sources":["E1","E2","E3"], // one evidence item per replicate row
+                  "derived":true,"source_values":[99.2,98.4,99.7]}],
+      "significance": [{"between":["control","hypoxia"],"label":"differs","defined_in_caption":true}]}]}],
   "texts": {"caption": "..."},
   "uncertainty": [], "limitations": [], "change_records": [] }
 ```
@@ -110,7 +110,8 @@ Rules the validator enforces (the codes are frozen in `references/spec-schema.md
   `series[].x` for line/scatter; `series[].errors` + `error_kind` (missing meaning → `E911`);
   `series[].n` (int or per-point array — required when the material has replicate rows → `E913`);
   `axis.{x,y}` with `label`/`unit`/`scale`/`tick_start`/`tick_end`/`tick_step`;
-  `significance[]` with `between` + `label` + `test` + `p` (or `defined_in_caption` → `E912`).
+  `significance[]` with `between` + `label` + a test name (or `defined_in_caption: true` when the
+  source states the comparison but not a test/p → `E912`).
   A quantitative axis with no `unit` → `E914`.
 * `errors` and `values` must be the same length; a `derived` value (a mean, a ratio, a
   normalisation) must list `source_values` so the arithmetic is checkable.
@@ -142,9 +143,11 @@ python3 scripts/chart.py result --out /app/output --input /input --work /app/wor
 Do this **before** `check`: gate **I** reads `result.json`, so a `check` with no result present
 reports gate I as failed. Merges `case.json.output_contract` keys with the real run: `case_id`,
 `status`, `artifacts` (path/bytes/sha256), `sources`, `evidence`, `change_records`,
-`uncertainty`, `limitations`, `preset`, `checks`, `mark_data_map`, `source_map`, `audit`
-(checks passed/failed/warned, unfilled fields, unmapped contract keys, determinism, font),
-`runtime`. Any contract key with no derivable value forces `status` to `partial`.
+`uncertainty`, `limitations`, `preset`, `mark_data_map`, `source_map`, `contract_values`,
+`audit` (checks passed/failed/warned, unfilled fields, unmapped contract keys, determinism,
+font), `runtime`. Any contract key with no derivable value forces `status` to `partial`; an
+unrecognised key is filled with a truthful run summary and listed in
+`audit.unmapped_contract_keys`.
 
 Run it early even if the figure is unfinished: it is the cheapest partial deliverable.
 
@@ -193,19 +196,22 @@ It is a floor, not the target — an authored spec is what earns the quality poi
 `mark_data_map.json` is the innovation of this Skill and the thing to show the user:
 
 ```
-python3 scripts/chart.py locate --out /app/output --mark "series:0#bar:2"
+python3 scripts/chart.py locate --out /app/output --mark "C1#series:1#bar:0"
 python3 scripts/chart.py locate --out /app/output --cell "materials/experiment.csv#experiment:5:cell_viability_pct"
-python3 scripts/chart.py locate --out /app/output --file materials/experiment.csv --row 5 --col cell_viability_pct
 ```
 
-* `--mark ID` → `{"mark": …, "source": {file, table, row, column, cell, quote}, "evidence": […]}`.
-* `--cell CELL` → `{"cell": …, "marks": ["series:0#bar:2", …]}`.
+* `--mark ID` → the mark record plus `source{file, table, row, column, cell, quote}`,
+  `derived`, `n` and `source_values` when the value aggregates several cells.
+* `--cell CELL` → the marks drawn from that cell, e.g.
+  `{"cell": "…", "marks": ["C1#series:1#bar:0", "C1#series:1#eb:0"], "count": 2}`.
 * Exit `0` hit / `2` usage / `5` no hit — and a miss still prints **parseable JSON naming the
   searched scope**, so a "not found" answer is evidence, not silence.
-
-Mark ids are stable and follow the frozen naming
-`<series-group>#pt:<i>` / `#bar:<i>` / `#cell:<r>,<c>` / `#eb:<i>`. Point a user at
-`references/provenance-and-evidence.md` for the full contract; never hand-write a mapping.
+* Copy the id from `mark_data_map.json` or the `locate` output: ids are
+  `<chart-id>#<series-group>#<family>:<index>` (e.g. `C1#series:0#bar:0`,
+  `C2#series:0#pt:3`, `C1#series:0#eb:0`); a bare `series:0#bar:0` is accepted when the suffix
+  matches exactly one mark, and `--file/--row/--col` resolves the table name from the map.
+* Point a user at `references/provenance-and-evidence.md` for the full contract; never hand-write a
+  mapping, and never edit `mark_data_map.json`.
 
 ### 8. Journal presets
 
@@ -256,7 +262,7 @@ Never "fix" the figure by editing an export. Read `validation_report.json` → `
 | Gate **H** export | `1`/`2` | Rebuild; if fonts cause it, install a CJK-capable font and record the fallback in `limitations`. |
 | Gate **I** contract | `1` | Check the exact `output_contract` key names; drop the `--status` override and re-run `result`. |
 | Gate **J** mark/source (`E910`) | `1` | For each offending mark in `validation_report.json`: bind `series[].values` to the real column, add `source`/`sources`, or mark it `derived` with the exact `source_values` (tolerance `1e-9`). Never delete the mapping to make the gate green. |
-| Gate **K** annotation (`E911`–`E915`) | `1` | `E911` add `error_kind` (state what the bar is: sd/sem/ci95/iqr/range); `E912` add `test`+`p` (or `defined_in_caption`); `E913` add `n`; `E914` add the axis `unit`; `E915` set `baseline: 0` or supply `justification`. |
+| Gate **K** annotation (`E911`–`E915`) | `1` | `E911` add `error_kind` (state what the bar is: sd/sem/ci95/iqr/range); `E912` add the test name the source gives, or `defined_in_caption: true` and define the comparison in the caption (then `p` is optional); `E913` add `n`; `E914` add the axis `unit`; `E915` set `baseline: 0` or supply `justification`. |
 | Gate **L** CJK (`E917`) | `1` | Use a font that contains the glyph, or state plainly in `limitations`/`uncertainty` that the glyph is unavailable and `status` is `partial`; **do not draw tofu boxes and call it pass**. |
 | Warn `W920`/`W922`/`W923` on a graded figure | `0` | Fix if cheap: widen the tick range, align the caption with the drawn categories, reduce overlap. Warns do not fail, but they are the difference between "pass" and "good". |
 | Artefacts missing | `3` | Run `build` before `check`/`result`. |
@@ -299,7 +305,11 @@ python3 scripts/contract_matrix.py       # adversarial output_contract key sets
 python3 scripts/gain_check.py            # measured 使用增益 A/B
 ```
 
-All must exit `0` on the shipped bundle. `contract_matrix` matters most for an **unseen** case:
+`presets --list` must exit `0`; the four harness commands (both `selftest` entry points,
+`contract_matrix`, `gain_check`) are required to exit `0` as well, and
+[`references/rubric-mapping.md`](references/rubric-mapping.md) §"Execution evidence" records the
+measured status of each with its command — quote that page rather than assuming, and never report a
+harness as green without its transcript. `contract_matrix` matters most for an **unseen** case:
 the evaluator's case may name its outputs anything, and an unknown contract key is filled with a
 truthful run summary and disclosed in `audit.unmapped_contract_keys` rather than silently
 emptied. `gain_check` measures defect interception (a fabricated value, a dangling citation, a
